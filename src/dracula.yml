@@ -5,7 +5,7 @@ maintainers:
 semanticClass: theme.dracula
 dracula:
   base:
-    - &BG        '#282A36'
+    - &BG        '#121A21'
     - &FG        '#F8F8F2'
     - &SELECTION '#44475A'
     - &CYAN      '#8BE9FD'
@@ -169,7 +169,8 @@ colors:
   editorCursor.foreground:
 
   editor.selectionBackground: *SELECTION                                        # Color of the editor selection
-  editor.selectionHighlightBackground: *BGLighter                               # Color for regions with the same content as the selection
+  # editor.selectionHighlightBackground: *BGLighter                               # Color for regions with the same content as the selection
+  editor.selectionHighlightBorder: *ORANGE
   editor.inactiveSelectionBackground:                                           # Color of the selection in an inactive editor
 
   editor.wordHighlightBackground: !alpha [ *CYAN, 50 ]                          # Background color of a symbol during read-access, for example when reading a variable
@@ -181,8 +182,8 @@ colors:
 
   editor.hoverHighlightBackground: *BGDarker                                    # Highlight below the word for which a hover is shown
 
-  editor.lineHighlightBackground:                                               # Background color for the highlight of line at the cursor position
-  editor.lineHighlightBorder: *SELECTION                                        # Background color for the border around the line at the cursor position
+  editor.lineHighlightBackground: *SELECTION                                    # Background color for the highlight of line at the cursor position
+  editor.lineHighlightBorder:                                                   # Background color for the border around the line at the cursor position
 
   editorLink.activeForeground: *CYAN                                            # Color of active links
   editor.rangeHighlightBackground: !alpha [ *PURPLE, 15 ]                       # Background color of highlighted ranges, like by Quick Open and Find features
@@ -529,13 +530,11 @@ tokenColors:
     - variable.parameter.function.language.special # Special words as parameters
     settings:
       foreground: *PURPLE
-      fontStyle: italic
 
   - name: Inherited classes
     scope:
     - entity.other.inherited-class
     settings:
-      fontStyle: italic
       foreground: *CYAN
 
 # =============================================================================
@@ -558,14 +557,12 @@ tokenColors:
     - comment.block.documentation storage.type.class
     settings:
       foreground: *CYAN
-      fontStyle: italic
 
   - name: JSDoc-style comment parameters
     scope:
     - comment.block.documentation variable
     settings:
       foreground: *ORANGE
-      fontStyle: italic
 
 # =============================================================================
 # Constants
@@ -607,23 +604,30 @@ tokenColors:
     - entity.other.attribute-name
     settings:
       foreground: *GREEN
-      fontStyle: italic
 
 # =============================================================================
 # Functions/Methods
 # =============================================================================
 
-  - name: Function names
+  - name: Function invocation
     scope:
-    - entity.name.function
     - meta.function-call.generic
+    - meta.function-call.js
     - meta.function-call.object
     - meta.function-call.php
     - meta.function-call.static
     - meta.method-call.java meta.method
+    - keyword.operator.function.infix
+    settings:
+      foreground: *CYAN
+
+  - name: Function definitions
+    scope:
+    - meta.definition.function
+    - meta.definition.method
+    - meta.object-literal.key.js entity.name.function.js
     - meta.method.groovy
     - support.function.any-method.lua
-    - keyword.operator.function.infix
     settings:
       foreground: *GREEN
 
@@ -636,7 +640,6 @@ tokenColors:
     - meta.selectionset.graphql meta.arguments.graphql variable.arguments.graphql
     - variable.parameter
     settings:
-      fontStyle: italic
       foreground: *ORANGE
 
   - name: Decorators
@@ -645,7 +648,6 @@ tokenColors:
     - meta.decorator variable.other.property
     settings:
       foreground: *GREEN
-      fontStyle: italic
 
   - name: Decorator Objects
     scope:
@@ -681,12 +683,11 @@ tokenColors:
 # Language Built-ins
 # =============================================================================
 
-  - name: Language Built-ins
+  - name: (Some) language Built-ins
     scope:
-    - support
+    - support.class.builtin
     settings:
-      fontStyle: italic
-      foreground: *CYAN
+      foreground: *GREEN
 
   - name: Built-in magic functions and constants
     scope:
@@ -798,7 +799,7 @@ tokenColors:
     scope:
     - variable.other.alias.yaml
     settings:
-      fontStyle: italic underline
+      fontStyle: underline
       foreground: *GREEN
 
 # =============================================================================
@@ -837,7 +838,6 @@ tokenColors:
     - storage.type.haskell
     - storage.type.ocaml
     settings:
-      fontStyle: italic
       foreground: *CYAN
 
   - name: Generics, templates, and mapped type declarations
@@ -945,6 +945,12 @@ tokenColors:
     settings:
       foreground: *FG
 
+  # - name: Object keys
+  #   scope:
+  #   - meta.object-literal.key
+  #   settings:
+  #     foreground: *YELLOW
+
   - name: Destructuring / aliasing reference name (LHS)
     scope:
     - meta.import variable.other.readwrite                          # Module import aliasing (real name)
@@ -952,7 +958,6 @@ tokenColors:
     - meta.object-binding-pattern-variable variable.object.property # Object destructuring property
     - meta.variable.assignment.destructured.object.coffee variable  # Object destructuring property (coffeescript)
     settings:
-      fontStyle: italic
       foreground: *ORANGE
 
   - name: Destructuring / aliasing variable name (RHS)
