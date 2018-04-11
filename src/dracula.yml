@@ -38,7 +38,7 @@ dracula:
     - &TEMP_PROPERTY_QUOTES '#8BE9FE'
   other:
     - &COMMENT       '#6272A4'
-    - &LineHighlight '#44475A75'
+    - &LineHighlight '#253340'
     - &WHITE         '#FFFFFF'
     - &TAB_DROP_BG   '#44475A70'
     # UI Variants
@@ -166,10 +166,10 @@ colors:
   editor.foreground: *FG
   editor.background: *BG
   editorLineNumber.foreground: *COMMENT
-  editorCursor.foreground:
+  editorCursor.foreground: *CYAN
 
   editor.selectionBackground: *SELECTION                                        # Color of the editor selection
-  # editor.selectionHighlightBackground: *BGLighter                               # Color for regions with the same content as the selection
+  # editor.selectionHighlightBackground: *BGLighter                             # Color for regions with the same content as the selection
   editor.selectionHighlightBorder: *ORANGE
   editor.inactiveSelectionBackground:                                           # Color of the selection in an inactive editor
 
@@ -182,7 +182,7 @@ colors:
 
   editor.hoverHighlightBackground: *BGDarker                                    # Highlight below the word for which a hover is shown
 
-  editor.lineHighlightBackground: *SELECTION                                    # Background color for the highlight of line at the cursor position
+  editor.lineHighlightBackground: *LineHighlight                                # Background color for the highlight of line at the cursor position
   editor.lineHighlightBorder:                                                   # Background color for the border around the line at the cursor position
 
   editorLink.activeForeground: *CYAN                                            # Color of active links
