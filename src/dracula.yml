@@ -537,6 +537,12 @@ tokenColors:
     settings:
       foreground: *CYAN
 
+  - name: Classes in use
+    scope:
+    - support.class.ruby
+    settings:
+      foreground: *GREEN
+
 # =============================================================================
 # Comments
 # =============================================================================
@@ -568,12 +574,17 @@ tokenColors:
 # Constants
 # =============================================================================
 
-  - name: Constants
+  - name: User-defined constants
     scope:
-    - constant
     - variable.other.constant
     settings:
       foreground: *PURPLE
+
+  - name: User-defined constants
+    scope:
+    - constant
+    settings:
+      foreground: *ORANGE
 
   - name: Constant escape sequences
     scope:
@@ -628,6 +639,7 @@ tokenColors:
     - meta.object-literal.key.js entity.name.function.js
     - meta.method.groovy
     - support.function.any-method.lua
+    - entity.name.function.ruby
     settings:
       foreground: *GREEN
 
@@ -945,11 +957,12 @@ tokenColors:
     settings:
       foreground: *FG
 
-  # - name: Object keys
-  #   scope:
-  #   - meta.object-literal.key
-  #   settings:
-  #     foreground: *YELLOW
+  - name: Hash keys
+    scope:
+    - constant.other.symbol.hashkey.ruby
+    - constant.other.symbol.ruby
+    settings:
+      foreground: *PURPLE
 
   - name: Destructuring / aliasing reference name (LHS)
     scope:
@@ -998,7 +1011,6 @@ tokenColors:
   # ==========
   - name: Edge cases (foreground color resets)
     scope:
-    - constant.other.symbol.hashkey.ruby                            # Ruby hash keys
     - keyword.operator.dereference.java                             # Java dot access
     - keyword.operator.navigation.groovy                            # groovy dot access
     - meta.scope.for-loop.shell punctuation.definition.string.begin
