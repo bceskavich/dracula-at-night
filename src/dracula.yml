@@ -519,7 +519,7 @@ tokenColors:
     scope:
     - entity.name.type.class
     settings:
-      foreground: *CYAN
+      foreground: *GREEN
       fontStyle: normal
 
   - name: this, super, self, etc.
@@ -530,6 +530,7 @@ tokenColors:
     - variable.language punctuation.definition.variable.php # the "$" symbol in $this
     - variable.other.readwrite.instance.ruby       # ruby's "@" instance symbol
     - variable.parameter.function.language.special # Special words as parameters
+    - support.variable.property.js
     settings:
       foreground: *PURPLE
 
@@ -542,6 +543,7 @@ tokenColors:
   - name: Classes in use
     scope:
     - support.class.ruby
+    - support.class.js
     settings:
       foreground: *GREEN
 
@@ -640,6 +642,7 @@ tokenColors:
     - meta.definition.function
     - meta.definition.method
     - meta.object-literal.key.js entity.name.function.js
+    - meta.var.expr.js meta.definition.variable.js entity.name.function.js
     - meta.method.groovy
     - support.function.any-method.lua
     - meta.function.method.with-arguments.ruby
@@ -702,6 +705,7 @@ tokenColors:
   - name: (Some) language Built-ins
     scope:
     - support.class.builtin
+    - support.constant.json.js
     settings:
       foreground: *GREEN
 
