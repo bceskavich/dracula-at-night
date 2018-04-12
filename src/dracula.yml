@@ -5,7 +5,7 @@ maintainers:
 semanticClass: theme.dracula
 dracula:
   base:
-    - &BG        '#121A21'
+    - &BG        '#0E1419'
     - &FG        '#F8F8F2'
     - &SELECTION '#44475A'
     - &CYAN      '#8BE9FD'
