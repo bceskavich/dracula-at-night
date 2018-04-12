@@ -274,7 +274,7 @@ colors:
   peekViewTitleLabel.foreground: *FG                                            # Color of the peek view title
 
   # Merge Conflicts
-  merge.currentHeaderBackground: !alpha [ *GREEN, 90 ]                          # Current header background in inline merge conflicts
+  merge.currentHeaderBackground: !alpha [ *GREEN, 90 ]                          # Current header bakckground in inline merge conflicts
   merge.currentContentBackground:                                               # Current content background in inline merge conflicts
   merge.incomingHeaderBackground: !alpha [ *PURPLE, 90 ]                        # Incoming header background in inline merge conflicts
   merge.incomingContentBackground:                                              # Incoming content background in inline merge conflicts
@@ -629,6 +629,7 @@ tokenColors:
     - meta.function-call.object
     - meta.function-call.php
     - meta.function-call.static
+    - meta.function-call.ruby
     - meta.method-call.java meta.method
     - keyword.operator.function.infix
     settings:
@@ -641,7 +642,8 @@ tokenColors:
     - meta.object-literal.key.js entity.name.function.js
     - meta.method.groovy
     - support.function.any-method.lua
-    - entity.name.function.ruby
+    - meta.function.method.with-arguments.ruby
+    - meta.function.method.without-arguments.ruby
     settings:
       foreground: *GREEN
 
@@ -961,8 +963,12 @@ tokenColors:
 
   - name: Hash keys
     scope:
+    - constant.language.symbol.hashkey.ruby
+    - constant.language.symbol.ruby
     - constant.other.symbol.hashkey.ruby
     - constant.other.symbol.ruby
+    - punctuation.definition.constant.ruby
+    - punctuation.definition.constant.hashkey.ruby
     settings:
       foreground: *PURPLE
 
