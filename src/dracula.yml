@@ -530,9 +530,15 @@ tokenColors:
     - variable.language punctuation.definition.variable.php # the "$" symbol in $this
     - variable.other.readwrite.instance.ruby       # ruby's "@" instance symbol
     - variable.parameter.function.language.special # Special words as parameters
-    - support.variable.property.js
+    - support.variable.property.js # .prototype
     settings:
       foreground: *PURPLE
+
+  - name: Lower-case classes (like console)
+    scope:
+    - support.class.console.js
+    settings:
+      foreground: *GREEN
 
   - name: Inherited classes
     scope:
@@ -755,6 +761,7 @@ tokenColors:
     - string.unquoted.heredoc punctuation.definition.string
     - support.other.chomping-indicator.yaml
     - punctuation.separator.annotation
+    - punctuation.accessor
     settings:
       foreground: *PINK
 
@@ -775,7 +782,6 @@ tokenColors:
     - punctuation.section.scope.end
     - storage.type.generic.java
     - string.template meta.brace
-    - string.template punctuation.accessor
     settings:
       foreground: *FG
 
