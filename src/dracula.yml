@@ -46,6 +46,7 @@ dracula:
     - &BGLight       '#343746' # HSV (230   , 25.71, 27.45)
     - &BGDark        '#21222C' # HSV (234.55, 25   , 17.25)
     - &BGDarker      '#191A21' # HSV (234.55, 25   , 13   )
+    - &PURPLEDarker  '#574473'
 
 # User Interface (more info: https://code.visualstudio.com/docs/getstarted/theme-color-reference)
 colors:
@@ -289,7 +290,7 @@ colors:
   panelTitle.inactiveForeground: *COMMENT                                       # Title color for the inactive panel
 
   # Status Bar Colors
-  statusBar.background: *BGDarker                                               # Standard Status Bar background color
+  statusBar.background: *PURPLEDarker                                           # Standard Status Bar background color
   statusBar.foreground: *FG                                                     # Status Bar foreground color
   statusBar.debuggingBackground: *RED                                           # Status Bar background color when a program is being debugged
   statusBar.debuggingForeground: *BGDarker                                      # Status Bar foreground color when a program is being debugged
