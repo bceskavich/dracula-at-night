@@ -534,9 +534,11 @@ tokenColors:
     settings:
       foreground: *PURPLE
 
-  - name: Lower-case classes (like console)
+  - name: Various language classes or objects
     scope:
     - support.class.console.js
+    - support.type.object.module.js
+    - support.class.promise.js
     settings:
       foreground: *GREEN
 
