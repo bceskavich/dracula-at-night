@@ -95,7 +95,7 @@ colors:
   # Input Control
   input.background: *BG                                                         # Input box background
   input.foreground: *FG                                                         # Input box foreground
-  input.border: *BGDarker                                                       # Input box border
+  input.border: *LineHighlight                                                       # Input box border
   input.placeholderForeground: *COMMENT                                         # Input box foreground color for placeholder text
   inputOption.activeBorder: *PURPLE                                             # Border color of activated options in input fields
   inputValidation.infoBackground:                                               # Input validation background color for information severity
@@ -131,15 +131,15 @@ colors:
   list.focusForeground:                                                         # List/Tree foreground color for the focused item when the list/tree is active. An active list/tree has keyboard focus, an inactive does not
 
   # Activity Bar
-  activityBar.background: *BGLight                                              # Activity Bar background color
+  activityBar.background: *LineHighlight                                              # Activity Bar background color
   activityBar.dropBackground:                                                   # Drag and drop feedback color for the Activity Bar items
   activityBar.foreground: *FG                                                   # Activity bar foreground color (for example used for the icons)
-  activityBar.border:                                                           # Activity Bar border color with the Side Bar
+  activityBar.border: *LineHighlight                                                           # Activity Bar border color with the Side Bar
   activityBarBadge.background: *PINK                                            # Activity notification badge background color
   activityBarBadge.foreground: *FG                                              # Activity notification badge foreground color
 
   # Side Bar
-  sideBar.background: *BGDark                                                   # Side Bar background color
+  sideBar.background: *BG                                                   # Side Bar background color
   sideBar.foreground:                                                           # Side Bar foreground color. The Side Bar is the container for views like Explorer and Search
   sideBar.border:                                                               # Side Bar border color on the side separating the editor
   sideBarTitle.foreground: *FG                                                  # Side Bar title foreground color
@@ -151,14 +151,14 @@ colors:
   editorGroup.border: *PURPLE                                                   # Color to separate multiple editor groups from each other
   editorGroup.dropBackground: *TAB_DROP_BG                                      # Background color when dragging editors around
   editorGroupHeader.noTabsBackground:                                           # Background color of the editor group title header when Tabs are disabled
-  editorGroupHeader.tabsBackground: *BGDarker                                   # Background color of the Tabs container
-  editorGroupHeader.tabsBorder:                                                 # Border color of the editor group title header when tabs are enabled. Editor groups are the containers of editors
-  tab.activeBackground: *BG                                                     # Active Tab background color
+  editorGroupHeader.tabsBackground: *LineHighlight                                   # Background color of the Tabs container
+  editorGroupHeader.tabsBorder: *PURPLEDarker                                                 # Border color of the editor group title header when tabs are enabled. Editor groups are the containers of editors
+  tab.activeBackground: *PURPLEDarker                                                     # Active Tab background color
   tab.activeForeground: *FG                                                     # Active Tab foreground color in an active group
-  tab.border: *BGDarker                                                         # Border to separate Tabs from each other
-  tab.activeBorder: !alpha [*PINK, 80]                                          # A border drawn to the bottom of the active tab
+  tab.border: *LineHighlight                                                         # Border to separate Tabs from each other
+  tab.activeBorder:                                        # A border drawn to the bottom of the active tab
   tab.unfocusedActiveBorder:                                                    # A border drawn to the bottom of the active tab in an editor group that is not focused
-  tab.inactiveBackground: *BGDark                                               # Inactive Tab background color
+  tab.inactiveBackground: *LineHighlight                                               # Inactive Tab background color
   tab.inactiveForeground: *COMMENT                                              # Inactive Tab foreground color in an active group
   tab.unfocusedActiveForeground:                                                # Active tab foreground color in an inactive editor group
   tab.unfocusedInactiveForeground:                                              # Inactive tab foreground color in an inactive editor group
@@ -168,6 +168,7 @@ colors:
   editor.background: *BG
   editorLineNumber.foreground: *COMMENT
   editorCursor.foreground: *CYAN
+  editorIndentGuide.activeBackground: *COMMENT
 
   editor.selectionBackground: *SELECTION                                        # Color of the editor selection
   # editor.selectionHighlightBackground: *BGLighter                             # Color for regions with the same content as the selection
@@ -290,7 +291,7 @@ colors:
   panelTitle.inactiveForeground: *COMMENT                                       # Title color for the inactive panel
 
   # Status Bar Colors
-  statusBar.background: *PURPLEDarker                                           # Standard Status Bar background color
+  statusBar.background: *BG                                           # Standard Status Bar background color
   statusBar.foreground: *FG                                                     # Status Bar foreground color
   statusBar.debuggingBackground: *RED                                           # Status Bar background color when a program is being debugged
   statusBar.debuggingForeground: *BGDarker                                      # Status Bar foreground color when a program is being debugged
@@ -300,12 +301,12 @@ colors:
   statusBarItem.hoverBackground:                                                # Status Bar item background color when hovering
   statusBarItem.prominentBackground: *RED                                       # Status Bar prominent items background color. Prominent items stand out from other Status Bar entries to indicate importance
   statusBarItem.prominentHoverBackground: *ORANGE                               # Status Bar prominent items background color when hovering. Prominent items stand out from other Status Bar entries to indicate importance
-  statusBar.border:
+  statusBar.border: *COMMENT
 
   # Title Bar Colors (MacOS Only)
-  titleBar.activeBackground: *BGDark                                            # Title Bar background when the window is active
+  titleBar.activeBackground: *LineHighlight                                            # Title Bar background when the window is active
   titleBar.activeForeground: *FG                                                # Title Bar foreground when the window is active
-  titleBar.inactiveBackground: *BGDarker                                        # Title Bar background when the window is inactive
+  titleBar.inactiveBackground: *LineHighlight                                        # Title Bar background when the window is inactive
   titleBar.inactiveForeground: *COMMENT                                         # Title Bar foreground when the window is inactive
 
   # Notification Dialog Colors
