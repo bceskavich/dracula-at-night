@@ -987,7 +987,7 @@ tokenColors:
   - name: Destructuring / aliasing reference name (LHS)
     scope:
     - meta.import variable.other.readwrite                          # Module import aliasing (real name)
-    - meta.export variable.other.readwrite                          # Module import aliasing (real name)
+    # - meta.export variable.other.readwrite                          # Module import aliasing (real name)
     - meta.object-binding-pattern-variable variable.object.property # Object destructuring property
     - meta.variable.assignment.destructured.object.coffee variable  # Object destructuring property (coffeescript)
     settings:
@@ -996,7 +996,7 @@ tokenColors:
   - name: Destructuring / aliasing variable name (RHS)
     scope:
     - meta.import variable.other.readwrite.alias                             # Module import aliasing (alias name)
-    - meta.export variable.other.readwrite.alias                             # Module import aliasing (alias name)
+    # - meta.export variable.other.readwrite.alias                             # Module import aliasing (alias name)
     - meta.variable.assignment.destructured.object.coffee variable variable  # Object destructuring variable (coffeescript)
     settings:
       fontStyle: normal
