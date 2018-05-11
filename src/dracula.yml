@@ -167,6 +167,7 @@ colors:
   editor.foreground: *FG
   editor.background: *BG
   editorLineNumber.foreground: *COMMENT
+  editorLineNumber.activeForeground: *CYAN
   editorCursor.foreground: *CYAN
   editorIndentGuide.activeBackground: *COMMENT
 
