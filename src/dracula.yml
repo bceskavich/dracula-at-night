@@ -533,14 +533,18 @@ tokenColors:
     - variable.other.readwrite.instance.ruby       # ruby's "@" instance symbol
     - variable.parameter.function.language.special # Special words as parameters
     - support.variable.property.js # .prototype
+    - support.variable.property.ts
     settings:
       foreground: *PURPLE
 
   - name: Various language classes or objects
     scope:
     - support.class.console.js
+    - support.class.console.ts
     - support.type.object.module.js
+    - support.type.object.module.ts
     - support.class.promise.js
+    - support.class.promise.ts
     settings:
       foreground: *GREEN
 
@@ -554,6 +558,7 @@ tokenColors:
     scope:
     - support.class.ruby
     - support.class.js
+    - support.class.ts
     settings:
       foreground: *GREEN
 
@@ -638,6 +643,7 @@ tokenColors:
     scope:
     - meta.function-call.generic
     - meta.function-call.js
+    - meta.function-call.ts
     - meta.function-call.object
     - meta.function-call.php
     - meta.function-call.static
@@ -652,7 +658,9 @@ tokenColors:
     - meta.definition.function
     - meta.definition.method
     - meta.object-literal.key.js entity.name.function.js
+    - meta.object-literal.key.ts entity.name.function.ts
     - meta.var.expr.js meta.definition.variable.js entity.name.function.js
+    - meta.var.expr.ts meta.definition.variable.ts entity.name.function.ts
     - meta.method.groovy
     - support.function.any-method.lua
     - meta.function.method.with-arguments.ruby
@@ -708,6 +716,27 @@ tokenColors:
     settings:
       foreground: *PINK
 
+  - name: TS Types
+    scope:
+    - meta.type.annotation.ts
+    - meta.return.type.ts
+    - meta.return.type.arrow.ts
+    settings:
+      foreground: *CYAN
+
+  - name: TS Type Params
+    scope:
+    - meta.type.parameters.ts
+    settings:
+      foreground: *ORANGE
+
+  - name: TS Type Params Punctuation
+    scope:
+    - punctuation.definition.typeparameters.begin.ts
+    - punctuation.definition.typeparameters.end.ts
+    settings:
+      foreground: *PINK
+
 # =============================================================================
 # Language Built-ins
 # =============================================================================
@@ -716,6 +745,7 @@ tokenColors:
     scope:
     - support.class.builtin
     - support.constant.json.js
+    - support.constant.json.ts
     settings:
       foreground: *GREEN
 
