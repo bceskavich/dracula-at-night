@@ -1,35 +1,26 @@
 {
-	"name": "theme-dracula",
-	"version": "2.10.0",
-	"displayName": "Dracula Official",
-	"homepage": "https://draculatheme.com/",
-	"description": "Official Dracula Theme. A dark theme for many editors, shells, and more.",
-	"publisher": "dracula-theme",
+	"name": "theme-dracula-at-night",
+	"version": "0.0.0",
+	"displayName": "Dracula At Night",
+	"description": "Dracula At Night — A Dracula fork, with a darker flavor",
+	"publisher": "bceskavich",
 	"license": "MIT",
 	"scripts": {
 		"attach": "./bootstrap.sh attach",
 		"build": "mkdir -p ./theme && node ./build.js",
 		"eject": "./bootstrap.sh eject",
-		"package": "vsce package -o ./bin/dracula.vsix",
 		"vscode:prepublish": "npm run build"
 	},
 	"maintainers": [
-		"Derek P Sifford <dereksifford@gmail.com>"
+		"Billy Ceskavich <bceskavich@gmail.com>"
 	],
-	"contributors": [
-		"Krzysztof Wisznarewski",
-		"Daniel Ramos",
-		"Eric Jackson",
-		"Elliott Pogue",
-		"Ajit Singh",
-		"Teddy Bradford"
-	],
+	"contributors": [],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/dracula/visual-studio-code.git"
+		"url": "https://github.com/bceskavich/dracula-at-night.git"
 	},
 	"bugs": {
-		"url": "https://github.com/dracula/visual-studio-code/issues"
+		"url": "https://github.com/bceskavich/dracula-at-night/issues"
 	},
 	"engines": {
 		"vscode": "^1.13.0"
@@ -43,7 +34,6 @@
 		"theme",
 		"color-theme"
 	],
-	"icon": "icon.png",
 	"galleryBanner": {
 		"color": "#3c4557",
 		"theme": "dark"
@@ -51,24 +41,14 @@
 	"contributes": {
 		"themes": [
 			{
-				"label": "Dracula",
+				"label": "Dracula At Night",
 				"uiTheme": "vs-dark",
-				"path": "./theme/dracula.json"
-			},
-			{
-				"label": "Dracula Soft",
-				"uiTheme": "vs-dark",
-				"path": "./theme/dracula-soft.json"
+				"path": "./theme/dracula-at-night.json"
 			}
 		]
 	},
 	"devDependencies": {
 		"js-yaml": "^3.11.0",
 		"tinycolor2": "^1.4.1"
-	},
-	"__metadata": {
-		"id": "4e44877c-1c8d-4f9c-ba86-1372d0fbeeb1",
-		"publisherDisplayName": "Dracula Theme",
-		"publisherId": "fbb3d024-f8f2-460c-bdb5-99552f6d8c4b"
 	}
 }

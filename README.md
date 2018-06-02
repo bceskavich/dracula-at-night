@@ -1,20 +1,15 @@
-# Dracula for [Visual Studio Code](http://code.visualstudio.com)
+# Dracula At Night for [Visual Studio Code](http://code.visualstudio.com)
 
-> A dark theme for [Visual Studio Code](http://code.visualstudio.com).
+A fork of [Dracula Official](https://github.com/dracula/visual-studio-code), with a darker flavor.
 
-![Screenshot](https://draculatheme.com/assets/img/screenshots/vscode.png)
+![Screenshot](https://dzwonsemrish7.cloudfront.net/items/2q3r15432s3H00013u1j/Screen%20Shot%202018-06-02%20at%2010.16.01.png)
 
 ## Install
 
-All instructions can be found at [draculatheme.com/visual-studio-code](https://draculatheme.com/visual-studio-code).
-
-## Team
-
-This theme is maintained by the following person(s) and a bunch of [awesome contributors](https://github.com/dracula/visual-studio-code/graphs/contributors).
-
-[![Derek S.](https://avatars3.githubusercontent.com/u/5240018?v=3&s=70)](https://github.com/dsifford) |
-:---: |
-[Derek S.](https://github.com/dsifford) |
+1. Go to `View -> Command Palette` or press `⌘+shift+P`
+2. Then enter `Install Extension`
+3. Write `theme-dracula-at-night`
+4. Select it or press Enter to install
 
 ## Contributing
 

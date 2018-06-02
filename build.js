@@ -12,7 +12,7 @@ const withAlphaType = new yaml.Type('!alpha', {
     }
 });
 const schema = yaml.Schema.create([ withAlphaType ]);
-const standard = fs.readFileSync(`${__dirname}/src/dracula.yml`, 'utf8');
+const standard = fs.readFileSync(`${__dirname}/src/dracula-at-night.yml`, 'utf8');
 
 yamlObj = yaml.load(standard, { schema });
 
@@ -32,5 +32,4 @@ const soft = standard.replace(/'(#[0-9A-Z]{6})/g, (match, hex) => {
     return `'${tinycolor(hex).toHexString()}`;
 });
 
-fs.writeFileSync(`${__dirname}/theme/dracula.json`, JSON.stringify(yaml.load(standard, { schema }), null, 4));
-fs.writeFileSync(`${__dirname}/theme/dracula-soft.json`, JSON.stringify(yaml.load(soft, { schema }), null, 4));
+fs.writeFileSync(`${__dirname}/theme/dracula-at-night.json`, JSON.stringify(yaml.load(standard, { schema }), null, 4));

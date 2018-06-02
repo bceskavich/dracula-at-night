@@ -1,7 +1,7 @@
-name: Dracula
-author: Zeno Rocha
+name: Dracula At Night
+author: Billy Ceskavich
 maintainers:
-  - Derek P Sifford <dereksifford@gmail.com>
+  - Billy Ceskavich <bceskavich@gmail.com>
 semanticClass: theme.dracula
 dracula:
   base:
