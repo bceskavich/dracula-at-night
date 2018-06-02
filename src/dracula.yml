@@ -39,6 +39,7 @@ dracula:
   other:
     - &COMMENT       '#6272A4'
     - &LineHighlight '#253340'
+    - &NonText       '#424450'
     - &WHITE         '#FFFFFF'
     - &TAB_DROP_BG   '#44475A70'
     # UI Variants
@@ -169,7 +170,6 @@ colors:
   editorLineNumber.foreground: *COMMENT
   editorLineNumber.activeForeground: *CYAN
   editorCursor.foreground: *CYAN
-  editorIndentGuide.activeBackground: *COMMENT
 
   editor.selectionBackground: *SELECTION                                        # Color of the editor selection
   editor.selectionHighlightBorder: *ORANGE
@@ -190,11 +190,12 @@ colors:
   editorLink.activeForeground: *CYAN                                            # Color of active links
   editor.rangeHighlightBackground: !alpha [ *PURPLE, 15 ]                       # Background color of highlighted ranges, like by Quick Open and Find features
 
-  editorWhitespace.foreground:                                                  # Color of whitespace characters in the editor
-  editorIndentGuide.background:                                                 # Color of the editor indentation guides
+  editorWhitespace.foreground: *NonText                                         # Color of whitespace characters in the editor
+  editorIndentGuide.background: *NonText                                        # Color of the editor indentation guides
+  editorIndentGuide.activeBackground: *COMMENT                                  # Color of the active indentation guide
   editorRuler.foreground:                                                       # Color of the editor rulers
 
-  editorCodeLens.foreground: *COMMENT                                            # Foreground color of an editor CodeLens
+  editorCodeLens.foreground: *COMMENT                                           # Foreground color of an editor CodeLens
 
   # NOTE: These are not set because they tend to be highly contested from
   # person to person. Thus, setting these is probably better suited
