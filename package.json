@@ -34,8 +34,9 @@
 		"theme",
 		"color-theme"
 	],
+	"icon": "dracula-at-night.png",
 	"galleryBanner": {
-		"color": "#3c4557",
+		"color": "#0e1419",
 		"theme": "dark"
 	},
 	"contributes": {
