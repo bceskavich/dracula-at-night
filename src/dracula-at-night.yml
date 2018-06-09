@@ -716,27 +716,6 @@ tokenColors:
     settings:
       foreground: *PINK
 
-  - name: TS Types
-    scope:
-    - meta.type.annotation.ts
-    - meta.return.type.ts
-    - meta.return.type.arrow.ts
-    settings:
-      foreground: *CYAN
-
-  - name: TS Type Params
-    scope:
-    - meta.type.parameters.ts
-    settings:
-      foreground: *ORANGE
-
-  - name: TS Type Params Punctuation
-    scope:
-    - punctuation.definition.typeparameters.begin.ts
-    - punctuation.definition.typeparameters.end.ts
-    settings:
-      foreground: *PINK
-
 # =============================================================================
 # Language Built-ins
 # =============================================================================
@@ -911,6 +890,35 @@ tokenColors:
   - name: Modifiers
     scope:
     - storage.modifier
+    settings:
+      foreground: *PINK
+
+  - name: TS Type Aliases and Interfaces
+    scope:
+    - entity.name.type.ts
+    - entity.name.type.alias.ts
+    - entity.name.type.interface.ts
+    settings:
+      foreground: *GREEN
+
+  - name: TS Primitives and Builtins
+    scope:
+    - support.type.primitive.ts
+    - support.type.builtin.ts
+    settings:
+      foreground: *CYAN
+
+  - name: TS Generics / Type Parameters
+    scope:
+    - meta.type.parameters.ts support.type.primitive.ts
+    - meta.type.parameters.ts entity.name.type.ts
+    settings:
+      foreground: *ORANGE
+
+  - name: TS Generics Punctuation
+    scope:
+    - punctuation.definition.typeparameters.begin.ts
+    - punctuation.definition.typeparameters.end.ts
     settings:
       foreground: *PINK
 
