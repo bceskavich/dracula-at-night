@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.0
+
+- Updated TypeScript type syntax stylings
+
 ## 1.0.1
 
 - Added a theme logo
