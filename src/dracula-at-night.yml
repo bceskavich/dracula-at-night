@@ -530,12 +530,25 @@ tokenColors:
     - keyword.other.this
     - variable.language
     - variable.language punctuation.definition.variable.php # the "$" symbol in $this
-    - variable.other.readwrite.instance.ruby                # ruby's "@" instance symbol
     - variable.parameter.function.language.special          # Special words as parameters
     - support.variable.property.js                          # .prototype
     - support.variable.property.ts
     settings:
       foreground: *PURPLE
+
+  - name: Ruby instance variables
+    scope:
+    - variable.other.readwrite.instance.ruby
+    - variable.other.readwrite.instance.ruby punctuation.definition.variable.ruby
+    settings:
+      foreground: *ORANGE
+
+  - name: Ruby class variables
+    scope:
+    - variable.other.readwrite.class.ruby
+    - variable.other.readwrite.class.ruby punctuation.definition.variable.ruby
+    settings:
+      foreground: *CYAN
 
   - name: Various language classes or objects
     scope:
@@ -647,9 +660,10 @@ tokenColors:
     - meta.function-call.object
     - meta.function-call.php
     - meta.function-call.static
-    - meta.function-call.ruby
+    - meta.function-call.ruby entity.name.function.ruby
     - meta.method-call.java meta.method
     - keyword.operator.function.infix
+    - support.function.kernel.ruby
     settings:
       foreground: *CYAN
 
@@ -663,8 +677,8 @@ tokenColors:
     - meta.var.expr.ts meta.definition.variable.ts entity.name.function.ts
     - meta.method.groovy
     - support.function.any-method.lua
-    - meta.function.method.with-arguments.ruby
-    - meta.function.method.without-arguments.ruby
+    - meta.function.method.with-arguments.ruby entity.name.function.ruby
+    - meta.function.method.without-arguments.ruby entity.name.function.ruby
     settings:
       foreground: *GREEN
 
@@ -676,6 +690,7 @@ tokenColors:
     - meta.function.arguments variable.other.php
     - meta.selectionset.graphql meta.arguments.graphql variable.arguments.graphql
     - variable.parameter
+    - variable.other.block.ruby
     settings:
       foreground: *ORANGE
 
@@ -750,7 +765,6 @@ tokenColors:
 
   - name: Separators (key/value, namespace, inheritance, pointer, hash, slice, etc)
     scope:
-    - constant.other.symbol.hashkey punctuation.definition.constant.ruby
     - entity.other.attribute-name.placeholder punctuation # Sass placeholder `%` symbols
     - entity.other.attribute-name.pseudo-class punctuation
     - entity.other.attribute-name.pseudo-element punctuation
@@ -771,6 +785,7 @@ tokenColors:
     - punctuation.separator.namespace
     - punctuation.separator.pointer-access
     - punctuation.separator.slice
+    - punctuation.separator.method.ruby
     - string.unquoted.heredoc punctuation.definition.string
     - support.other.chomping-indicator.yaml
     - punctuation.separator.annotation
@@ -1013,7 +1028,7 @@ tokenColors:
     settings:
       foreground: *FG
 
-  - name: Hash keys
+  - name: Ruby symbols
     scope:
     - constant.language.symbol.hashkey.ruby
     - constant.language.symbol.ruby
@@ -1023,6 +1038,12 @@ tokenColors:
     - punctuation.definition.constant.hashkey.ruby
     settings:
       foreground: *PURPLE
+
+  - name: Ruby constants
+    scope:
+    - variable.other.constant.ruby
+    settings:
+      foreground: *CYAN
 
   - name: Destructuring / aliasing reference name (LHS)
     scope:
