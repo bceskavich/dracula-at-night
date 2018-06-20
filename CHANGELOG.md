@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.2.0
+
+Updates to better support Ruby:
+
+- Colors for instance (orange) and class (cyan) variables
+- Fix a bug with coloring function invocations
+- Ensure function definition punctuation is not colored green
+- Ensure block method params are colored orange as expected
+- Separator punctuation (like dots) should be styled pink
+- Style constants as cyan to help differentiate with symbols, which are purple
+
 ## 1.1.0
 
 - Updated TypeScript type syntax stylings
