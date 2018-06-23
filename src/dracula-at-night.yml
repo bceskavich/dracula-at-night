@@ -200,7 +200,7 @@ colors:
   # NOTE: These are not set because they tend to be highly contested from
   # person to person. Thus, setting these is probably better suited
   # for workbench.colorCustomizations in User Settings
-  editorBracketMatch.background: *PINK                                          # Background color behind matching brackets
+  editorBracketMatch.background:                                                # Background color behind matching brackets
   editorBracketMatch.border:                                                    # Color for matching brackets boxes
 
 
