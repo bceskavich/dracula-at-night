@@ -627,7 +627,7 @@ tokenColors:
       foreground: *PINK
 
 # =============================================================================
-# Entities
+# HTML / JSX / CSS
 # =============================================================================
 
   - name: HTML tags
@@ -635,6 +635,12 @@ tokenColors:
     - entity.name.tag
     settings:
       foreground: *PINK
+
+  - name: Component tags
+    scope:
+    - entity.name.tag support.class.component.js
+    settings:
+      foreground: *RED
 
   - name: CSS attribute parent selectors ('&')
     scope:
@@ -675,6 +681,7 @@ tokenColors:
     - meta.object-literal.key.ts entity.name.function.ts
     - meta.var.expr.js meta.definition.variable.js entity.name.function.js
     - meta.var.expr.ts meta.definition.variable.ts entity.name.function.ts
+    - meta.definition.property.js entity.name.function.js
     - meta.method.groovy
     - support.function.any-method.lua
     - meta.function.method.with-arguments.ruby entity.name.function.ruby
