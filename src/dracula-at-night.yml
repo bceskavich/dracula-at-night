@@ -48,7 +48,6 @@ dracula:
     - &BGDark        '#21222C' # HSV (234.55, 25   , 17.25)
     - &BGDarker      '#191A21' # HSV (234.55, 25   , 13   )
     - &PURPLEDarker  '#574473'
-    # - &PinkLighter   '#DF35F3'
 
 # User Interface (more info: https://code.visualstudio.com/docs/getstarted/theme-color-reference)
 colors:
