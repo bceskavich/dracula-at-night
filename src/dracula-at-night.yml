@@ -695,7 +695,6 @@ tokenColors:
     - meta.at-rule.function variable # Sass function params
     - meta.at-rule.mixin variable    # Sass mixin params
     - meta.function.arguments variable.other.php
-    - meta.selectionset.graphql meta.arguments.graphql variable.arguments.graphql
     - variable.parameter
     - variable.other.block.ruby
     settings:
@@ -1076,22 +1075,32 @@ tokenColors:
   # =======
   - name: GraphQL keys
     scope:
-    - meta.selectionset.graphql variable
+    - variable.graphql
+    - variable.arguments.graphql
     settings:
       foreground: *YELLOW
 
-  - name: GraphQL function arguments
+  - name: GraphQL types
     scope:
-    - meta.selectionset.graphql meta.arguments variable
-    settings:
-      foreground: *FG
-
-  - name: GraphQL fragment name (definition)
-    scope:
-    - entity.name.fragment.graphql
-    - variable.fragment.graphql
+    - support.type.graphql
+    - support.type.builtin.graphql
+    - support.type.enum.graphql
+    - entity.scalar.graphql
     settings:
       foreground: *CYAN
+
+  - name: Mutations, fragments, and queries
+    scope:
+    - entity.name.function.graphql
+    settings:
+      foreground: *GREEN
+
+  - name: Variables
+    scope:
+    - meta.selectionset.graphql variable.graphql
+    - variable.parameter.graphql
+    settings:
+      foreground: *ORANGE
 
   # Edge Cases
   # ==========
