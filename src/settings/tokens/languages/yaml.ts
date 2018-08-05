@@ -1,8 +1,14 @@
 import { Colors } from '../../Theme';
-import TokenSettings from '../TokenSettings';
+import TokenSettings, { TokenFontStyle } from '../TokenSettings';
 
-export default ({ base }: Colors): TokenSettings[] => [
-  {
+export default (colors: Colors): TokenSettings[] => [
+  punctuation(colors),
+  keys(colors),
+  aliases(colors)
+];
+
+function punctuation({ base }: Colors): TokenSettings {
+  return {
     name: 'YAML separators',
     scope: [
       'punctuation.definition.block.scalar.folded.yaml',
@@ -14,5 +20,26 @@ export default ({ base }: Colors): TokenSettings[] => [
     settings: {
       foreground: base.pink
     }
-  }
-];
+  };
+}
+
+function keys({ base }: Colors): TokenSettings {
+  return {
+    name: 'YAML keys',
+    scope: ['entity.name.tag.yaml'],
+    settings: {
+      foreground: base.cyan
+    }
+  };
+}
+
+function aliases({ base }: Colors): TokenSettings {
+  return {
+    name: 'YAML aliases',
+    scope: ['variable.other.alias.yaml'],
+    settings: {
+      fontStyle: TokenFontStyle.underline,
+      foreground: base.green
+    }
+  };
+}
