@@ -5,7 +5,8 @@ export default (colors: Colors): TokenSettings[] => [
   definitions(colors),
   params(colors),
   invocation(colors),
-  decorators(colors)
+  decorators(colors),
+  magicFunctions(colors)
 ];
 
 function definitions({ base }: Colors): TokenSettings {
@@ -58,6 +59,16 @@ function decorators({ base }: Colors): TokenSettings {
     ],
     settings: {
       foreground: base.green
+    }
+  };
+}
+
+function magicFunctions({ base }: Colors): TokenSettings {
+  return {
+    name: 'Magic functions',
+    scope: ['support.function.magic'],
+    settings: {
+      foreground: base.purple
     }
   };
 }

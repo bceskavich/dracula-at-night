@@ -4,7 +4,8 @@ import TokenSettings from '../TokenSettings';
 export default (colors: Colors): TokenSettings[] => [
   classDefinitions(colors),
   instanceKeywords(colors),
-  inheritedClasses(colors)
+  inheritedClasses(colors),
+  builtinClasses(colors)
 ];
 
 // TODO: will lack of fontStyle: normal cause problems?
@@ -38,6 +39,16 @@ function inheritedClasses({ base }: Colors): TokenSettings {
     scope: ['entity.other.inherited-class'],
     settings: {
       foreground: base.cyan
+    }
+  };
+}
+
+function builtinClasses({ base }: Colors): TokenSettings {
+  return {
+    name: 'Built-in classes',
+    scope: ['support.class.builtin'],
+    settings: {
+      foreground: base.green
     }
   };
 }

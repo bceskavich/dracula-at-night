@@ -5,7 +5,8 @@ export default (colors: Colors): TokenSettings[] => [
   constants(colors),
   userDefinedConstants(colors),
   constantEscapes(colors),
-  timestamps(colors)
+  timestamps(colors),
+  builtinConstants(colors)
 ];
 
 function constants({ base }: Colors): TokenSettings {
@@ -48,6 +49,16 @@ function timestamps({ base }: Colors): TokenSettings {
     scope: ['constant.other.date', 'constant.other.timestamp'],
     settings: {
       foreground: base.orange
+    }
+  };
+}
+
+function builtinConstants({ base }: Colors): TokenSettings {
+  return {
+    name: 'Built-in constants',
+    scope: ['support.variable', 'variable.other.predefined'],
+    settings: {
+      foreground: base.purple
     }
   };
 }

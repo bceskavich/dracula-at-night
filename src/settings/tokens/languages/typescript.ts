@@ -22,7 +22,8 @@ function specialLanguageClasses({ base }: Colors): TokenSettings {
     scope: [
       'support.class.console.ts',
       'support.type.object.module.ts',
-      'support.class.promise.ts'
+      'support.class.promise.ts',
+      'support.constant.json.ts'
     ],
     settings: {
       foreground: base.green

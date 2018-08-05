@@ -22,7 +22,8 @@ function specialLanguageClasses({ base }: Colors): TokenSettings {
     scope: [
       'support.class.console.js',
       'support.type.object.module.js',
-      'support.class.promise.js'
+      'support.class.promise.js',
+      'support.constant.json.js'
     ],
     settings: {
       foreground: base.green
