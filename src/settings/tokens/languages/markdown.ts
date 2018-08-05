@@ -1,4 +1,4 @@
-import { Colors } from '../../../themes/Theme';
+import { Colors } from '../../Theme';
 import TokenSettings, { TokenFontStyle } from '../TokenSettings';
 
 export default (colors: Colors): TokenSettings[] => [

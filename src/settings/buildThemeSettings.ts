@@ -1,4 +1,4 @@
-import { ANSIColors, BaseColors, MiscColors } from '../themes/Theme';
+import { ANSIColors, BaseColors, MiscColors } from './Theme';
 import tokens from './tokens';
 import TokenSettings from './tokens/TokenSettings';
 

@@ -1,5 +1,5 @@
 import buildThemeSettings from '../settings/buildThemeSettings';
-import { ANSIColors, BaseColors, MiscColors, Theme } from './Theme';
+import { ANSIColors, BaseColors, MiscColors, Theme } from '../settings/Theme';
 
 // Base colors
 const base: BaseColors = {
