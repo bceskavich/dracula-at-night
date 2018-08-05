@@ -12,7 +12,7 @@ export interface Theme {
   tokenColors: TokenSettings[];
 }
 
-interface Colors {
+export interface Colors {
   base: BaseColors;
   ansi: ANSIColors;
   misc: MiscColors;

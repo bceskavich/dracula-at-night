@@ -5,14 +5,15 @@ export default interface TokenSettings {
 }
 
 interface TokenSettingsList {
-  foreground: string;
+  foreground?: string;
   fontStyle?: TokenFontStyle;
 }
 
-type TokenFontStyle =
-  | 'regular'
-  | 'normal'
-  | 'bold'
-  | 'italic'
-  | 'underline'
-  | 'underline italic';
+export enum TokenFontStyle {
+  regular = 'regular',
+  normal = 'normal',
+  bold = 'bold',
+  italic = 'italic',
+  underline = 'underline',
+  ui = 'underline italic'
+}
