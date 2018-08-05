@@ -1,9 +1,12 @@
 import { Colors } from '../../../themes/Theme';
 import TokenSettings, { TokenFontStyle } from '../TokenSettings';
 
-export default (colors): TokenSettings[] => {
-  return [...buildGeneralSettings(colors)];
-};
+import classes from './classes';
+
+export default (colors): TokenSettings[] => [
+  ...buildGeneralSettings(colors),
+  ...classes(colors)
+];
 
 function buildGeneralSettings({ base }: Colors): TokenSettings[] {
   return [
