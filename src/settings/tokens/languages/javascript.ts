@@ -9,19 +9,19 @@ export default (colors: Colors): TokenSettings[] => [
 
 function prototypeProperty({ base }: Colors): TokenSettings {
   return {
-    name: 'TypeScript prototype prop',
-    scope: ['support.variable.property.ts'],
+    name: 'JavaScript prototype prop',
+    scope: ['support.variable.property.js'],
     settings: { foreground: base.purple }
   };
 }
 
 function specialLanguageClasses({ base }: Colors): TokenSettings {
   return {
-    name: 'TypeScript language classes',
+    name: 'JavaScript language classes',
     scope: [
-      'support.class.console.ts',
-      'support.type.object.module.ts',
-      'support.class.promise.ts'
+      'support.class.console.js',
+      'support.type.object.module.js',
+      'support.class.promise.js'
     ],
     settings: {
       foreground: base.green
@@ -31,24 +31,10 @@ function specialLanguageClasses({ base }: Colors): TokenSettings {
 
 function classesInUse({ base }: Colors): TokenSettings {
   return {
-    name: 'TypeScript classes in use',
-    scope: ['support.class.ts'],
+    name: 'JavaScript classes in use',
+    scope: ['support.class.js'],
     settings: {
       foreground: base.green
     }
   };
 }
-
-// function aliasesAndInterfaces({ base }): TokenSettings {
-//   return {
-//     name: 'TS Type Aliases and Interfaces',
-//     scope: [
-//       'entity.name.type.ts',
-//       'entity.name.type.alias.ts',
-//       'entity.name.type.interface.ts'
-//     ],
-//     settings: {
-//       foreground: base.green
-//     }
-//   };
-// }
