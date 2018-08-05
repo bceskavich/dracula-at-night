@@ -3,11 +3,13 @@ import TokenSettings, { TokenFontStyle } from '../TokenSettings';
 
 import classes from './classes';
 import comments from './comments';
+import constants from './constants';
 
 export default (colors): TokenSettings[] => [
   ...buildGeneralSettings(colors),
   ...classes(colors),
-  ...comments(colors)
+  ...comments(colors),
+  ...constants(colors)
 ];
 
 function buildGeneralSettings({ base }: Colors): TokenSettings[] {

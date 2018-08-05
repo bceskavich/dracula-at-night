@@ -4,7 +4,8 @@ import TokenSettings from '../TokenSettings';
 export default (colors: Colors): TokenSettings[] => [
   instanceVariables(colors),
   classVariables(colors),
-  classesInUse(colors)
+  classesInUse(colors),
+  constants(colors)
 ];
 
 function instanceVariables({ base }: Colors): TokenSettings {
@@ -39,6 +40,16 @@ function classesInUse({ base }: Colors): TokenSettings {
     scope: ['support.class.ruby'],
     settings: {
       foreground: base.green
+    }
+  };
+}
+
+function constants({ base }: Colors): TokenSettings {
+  return {
+    name: 'Ruby constant definitions',
+    scope: ['variable.other.constant.ruby'],
+    settings: {
+      foreground: base.cyan
     }
   };
 }
