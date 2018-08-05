@@ -6,6 +6,7 @@ import comments from './comments';
 import constants from './constants';
 import functions from './functions';
 import keywords from './keywords';
+import punctuation from './punctuation';
 
 export default (colors): TokenSettings[] => [
   ...buildGeneralSettings(colors),
@@ -13,7 +14,8 @@ export default (colors): TokenSettings[] => [
   ...comments(colors),
   ...constants(colors),
   ...functions(colors),
-  ...keywords(colors)
+  ...keywords(colors),
+  ...punctuation(colors)
 ];
 
 function buildGeneralSettings({ base }: Colors): TokenSettings[] {

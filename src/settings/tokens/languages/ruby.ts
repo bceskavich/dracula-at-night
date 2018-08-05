@@ -6,7 +6,8 @@ export default (colors: Colors): TokenSettings[] => [
   classVariables(colors),
   classesInUse(colors),
   constants(colors),
-  ...functions(colors)
+  ...functions(colors),
+  ...punctuation(colors)
 ];
 
 function instanceVariables({ base }: Colors): TokenSettings {
@@ -82,6 +83,25 @@ function functions({ base }: Colors): TokenSettings[] {
       ],
       settings: {
         foreground: base.cyan
+      }
+    }
+  ];
+}
+
+function punctuation({ base }: Colors): TokenSettings[] {
+  return [
+    {
+      name: 'Ruby separators',
+      scope: ['punctuation.separator.method.ruby'],
+      settings: {
+        foreground: base.pink
+      }
+    },
+    {
+      name: 'Ruby interpolation',
+      scope: ['punctuation.section.embedded.end source.ruby'],
+      settings: {
+        foreground: base.pink
       }
     }
   ];

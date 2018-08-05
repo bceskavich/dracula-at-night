@@ -3,7 +3,8 @@ import TokenSettings from '../TokenSettings';
 
 export default (colors: Colors): TokenSettings[] => [
   instanceKeywords(colors),
-  ...functions(colors)
+  ...functions(colors),
+  interpolation(colors)
 ];
 
 function instanceKeywords({ base }: Colors): TokenSettings {
@@ -31,4 +32,14 @@ function functions({ base }: Colors): TokenSettings[] {
       }
     }
   ];
+}
+
+function interpolation({ base }: Colors): TokenSettings {
+  return {
+    name: 'PHP interpolation operators',
+    scope: ['punctuation.section.embedded.end source.php'],
+    settings: {
+      foreground: base.pink
+    }
+  };
 }
