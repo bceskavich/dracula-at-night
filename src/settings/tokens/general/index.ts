@@ -5,13 +5,15 @@ import classes from './classes';
 import comments from './comments';
 import constants from './constants';
 import functions from './functions';
+import keywords from './keywords';
 
 export default (colors): TokenSettings[] => [
   ...buildGeneralSettings(colors),
   ...classes(colors),
   ...comments(colors),
   ...constants(colors),
-  ...functions(colors)
+  ...functions(colors),
+  ...keywords(colors)
 ];
 
 function buildGeneralSettings({ base }: Colors): TokenSettings[] {

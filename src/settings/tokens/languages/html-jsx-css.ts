@@ -31,6 +31,13 @@ function componentTags({ base }: Colors): TokenSettings {
 function selectors({ base }: Colors): TokenSettings[] {
   return [
     {
+      name: 'Generic selectors',
+      scope: ['meta.selector'],
+      settings: {
+        foreground: base.pink
+      }
+    },
+    {
       name: 'Parent selectors (like `&`)',
       scope: ['entity.other.attribute-name.parent-selector'],
       settings: {
