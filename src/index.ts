@@ -1,9 +1,1 @@
-interface Initial {
-  henlo: string;
-}
-
-const config: Initial = {
-  henlo: 'world'
-};
-
-export default config;
+export { default as DraculaAtNight } from './themes/DraculaAtNight';
