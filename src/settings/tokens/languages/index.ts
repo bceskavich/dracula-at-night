@@ -1,6 +1,7 @@
 import TokenSettings from '../TokenSettings';
 
 import diff from './diff';
+import htmlCssJsx from './html-jsx-css';
 import javascript from './javascript';
 import markdown from './markdown';
 import php from './php';
@@ -10,6 +11,7 @@ import typescript from './typescript';
 
 export default (colors): TokenSettings[] => [
   ...diff(colors),
+  ...htmlCssJsx(colors),
   ...javascript(colors),
   ...markdown(colors),
   ...php(colors),
