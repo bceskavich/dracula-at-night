@@ -1,5 +1,3 @@
-import { ANSIColors, BaseColors, MiscColors } from './colorVariables';
-
 export default interface TokenSettings {
   name?: string;
   scope: string[];
@@ -7,11 +5,10 @@ export default interface TokenSettings {
 }
 
 interface TokenSettingsList {
-  foreground: TokenForeground;
+  foreground: string;
   fontStyle?: TokenFontStyle;
 }
 
-type TokenForeground = BaseColors | ANSIColors | MiscColors;
 type TokenFontStyle =
   | 'regular'
   | 'normal'
