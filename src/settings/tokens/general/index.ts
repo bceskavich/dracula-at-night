@@ -4,12 +4,14 @@ import TokenSettings, { TokenFontStyle } from '../TokenSettings';
 import classes from './classes';
 import comments from './comments';
 import constants from './constants';
+import functions from './functions';
 
 export default (colors): TokenSettings[] => [
   ...buildGeneralSettings(colors),
   ...classes(colors),
   ...comments(colors),
-  ...constants(colors)
+  ...constants(colors),
+  ...functions(colors)
 ];
 
 function buildGeneralSettings({ base }: Colors): TokenSettings[] {

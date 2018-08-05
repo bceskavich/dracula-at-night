@@ -5,7 +5,8 @@ export default (colors: Colors): TokenSettings[] => [
   instanceVariables(colors),
   classVariables(colors),
   classesInUse(colors),
-  constants(colors)
+  constants(colors),
+  ...functions(colors)
 ];
 
 function instanceVariables({ base }: Colors): TokenSettings {
@@ -52,4 +53,36 @@ function constants({ base }: Colors): TokenSettings {
       foreground: base.cyan
     }
   };
+}
+
+function functions({ base }: Colors): TokenSettings[] {
+  return [
+    {
+      name: 'Ruby function definitions',
+      scope: [
+        'meta.function.method.with-arguments.ruby entity.name.function.ruby',
+        'meta.function.method.without-arguments.ruby entity.name.function.ruby'
+      ],
+      settings: {
+        foreground: base.green
+      }
+    },
+    {
+      name: 'Ruby block function parameters',
+      scope: ['variable.other.block.ruby'],
+      settings: {
+        foreground: base.orange
+      }
+    },
+    {
+      name: 'Ruby function invocation',
+      scope: [
+        'meta.function-call.ruby entity.name.function.ruby',
+        'support.function.kernel.ruby'
+      ],
+      settings: {
+        foreground: base.cyan
+      }
+    }
+  ];
 }

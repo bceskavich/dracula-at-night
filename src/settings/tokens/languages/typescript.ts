@@ -4,7 +4,8 @@ import TokenSettings from '../TokenSettings';
 export default (colors: Colors): TokenSettings[] => [
   prototypeProperty(colors),
   specialLanguageClasses(colors),
-  classesInUse(colors)
+  classesInUse(colors),
+  ...functions(colors)
 ];
 
 function prototypeProperty({ base }: Colors): TokenSettings {
@@ -27,6 +28,28 @@ function specialLanguageClasses({ base }: Colors): TokenSettings {
       foreground: base.green
     }
   };
+}
+
+function functions({ base }: Colors): TokenSettings[] {
+  return [
+    {
+      name: 'TS function definitions',
+      scope: [
+        'meta.object-literal.key.ts entity.name.function.ts',
+        'meta.var.expr.ts meta.definition.variable.ts entity.name.function.ts'
+      ],
+      settings: {
+        foreground: base.green
+      }
+    },
+    {
+      name: 'TS function invocation',
+      scope: ['meta.function-call.ts'],
+      settings: {
+        foreground: base.cyan
+      }
+    }
+  ];
 }
 
 function classesInUse({ base }: Colors): TokenSettings {
