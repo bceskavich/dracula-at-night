@@ -1,8 +1,0 @@
-src/**
-.editorconfig
-node_modules
-build.js
-.github/*
-.vscode/**
-bootstrap.sh
-known_issues.md

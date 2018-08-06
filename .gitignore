@@ -1,4 +1,9 @@
 node_modules
 theme
-src/tests
-bin
+build
+
+# Logs + dependency pieces
+logs
+*.log
+yarn-debug.log*
+yarn-error.log*
