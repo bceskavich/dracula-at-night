@@ -4,7 +4,8 @@ import TokenSettings from '../TokenSettings';
 export default (colors: Colors): TokenSettings[] => [
   instanceKeywords(colors),
   ...functions(colors),
-  interpolation(colors)
+  interpolation(colors),
+  types(colors)
 ];
 
 function instanceKeywords({ base }: Colors): TokenSettings {
@@ -40,6 +41,16 @@ function interpolation({ base }: Colors): TokenSettings {
     scope: ['punctuation.section.embedded.end source.php'],
     settings: {
       foreground: base.pink
+    }
+  };
+}
+
+function types({ base }: Colors): TokenSettings {
+  return {
+    name: 'PHP Types',
+    scope: ['storage.type.php'],
+    settings: {
+      foreground: base.cyan
     }
   };
 }

@@ -5,7 +5,8 @@ export default (colors: Colors): TokenSettings[] => [
   prototypeProperty(colors),
   specialLanguageClasses(colors),
   classesInUse(colors),
-  ...functions(colors)
+  ...functions(colors),
+  ...typings(colors)
 ];
 
 function prototypeProperty({ base }: Colors): TokenSettings {
@@ -63,16 +64,45 @@ function classesInUse({ base }: Colors): TokenSettings {
   };
 }
 
-// function aliasesAndInterfaces({ base }): TokenSettings {
-//   return {
-//     name: 'TS Type Aliases and Interfaces',
-//     scope: [
-//       'entity.name.type.ts',
-//       'entity.name.type.alias.ts',
-//       'entity.name.type.interface.ts'
-//     ],
-//     settings: {
-//       foreground: base.green
-//     }
-//   };
-// }
+function typings({ base }: Colors): TokenSettings[] {
+  return [
+    {
+      name: 'TS Type Aliases and Interfaces',
+      scope: [
+        'entity.name.type.ts',
+        'entity.name.type.alias.ts',
+        'entity.name.type.interface.ts'
+      ],
+      settings: {
+        foreground: base.green
+      }
+    },
+    {
+      name: 'TS Primitives and Builtins',
+      scope: ['support.type.primitive.ts', 'support.type.builtin.ts'],
+      settings: {
+        foreground: base.cyan
+      }
+    },
+    {
+      name: 'TS Generics / Type Parameters',
+      scope: [
+        'meta.type.parameters.ts support.type.primitive.ts',
+        'meta.type.parameters.ts entity.name.type.ts'
+      ],
+      settings: {
+        foreground: base.orange
+      }
+    },
+    {
+      name: 'TS Generics Punctuation',
+      scope: [
+        'punctuation.definition.typeparameters.begin.ts',
+        'punctuation.definition.typeparameters.end.ts'
+      ],
+      settings: {
+        foreground: base.pink
+      }
+    }
+  ];
+}

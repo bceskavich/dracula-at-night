@@ -1,7 +1,10 @@
 import { Colors } from '../../Theme';
 import TokenSettings from '../TokenSettings';
 
-export default (colors: Colors): TokenSettings[] => [functions(colors)];
+export default (colors: Colors): TokenSettings[] => [
+  functions(colors),
+  ...typings(colors)
+];
 
 function functions({ base }: Colors): TokenSettings {
   return {
@@ -11,4 +14,23 @@ function functions({ base }: Colors): TokenSettings {
       foreground: base.green
     }
   };
+}
+
+function typings({ base }: Colors): TokenSettings[] {
+  return [
+    {
+      name: 'Groovy storage',
+      scope: ['source.groovy storage.type.def'],
+      settings: {
+        foreground: base.pink
+      }
+    },
+    {
+      name: 'Groovy Types',
+      scope: ['source.groovy storage.type', 'storage.type.groovy'],
+      settings: {
+        foreground: base.cyan
+      }
+    }
+  ];
 }
