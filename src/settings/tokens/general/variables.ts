@@ -2,16 +2,16 @@ import { Colors } from '../../Theme';
 import TokenSettings from '../TokenSettings';
 
 export default (colors: Colors): TokenSettings[] => [
-  interpolation(colors),
+  variables(colors),
   ...destructuring(colors)
 ];
 
-function interpolation({ base }: Colors): TokenSettings {
+function variables({ base }: Colors): TokenSettings {
   return {
-    name: 'CoffeeScript interpolation punctuation',
-    scope: ['punctuation.section.embedded.coffee'],
+    name: 'Variables and object properties',
+    scope: ['variable', 'support.variable.property'],
     settings: {
-      foreground: base.pink
+      foreground: base.fg
     }
   };
 }
@@ -20,16 +20,17 @@ function destructuring({ base }: Colors): TokenSettings[] {
   return [
     {
       name: 'Destructuring value for alias',
-      scope: ['meta.variable.assignment.destructured.object.coffee variable'],
+      scope: [
+        'meta.import variable.other.readwrite',
+        'meta.object-binding-pattern-variable variable.object.property'
+      ],
       settings: {
         foreground: base.orange
       }
     },
     {
       name: 'Destructuring value alias',
-      scope: [
-        'meta.variable.assignment.destructured.object.coffee variable variable'
-      ],
+      scope: ['meta.import variable.other.readwrite.alias'],
       settings: {
         foreground: base.fg
       }

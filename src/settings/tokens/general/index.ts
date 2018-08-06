@@ -7,7 +7,9 @@ import constants from './constants';
 import functions from './functions';
 import keywords from './keywords';
 import punctuation from './punctuation';
+import strings from './strings';
 import typings from './typings';
+import variables from './variables';
 
 export default (colors): TokenSettings[] => [
   ...buildGeneralSettings(colors),
@@ -17,7 +19,9 @@ export default (colors): TokenSettings[] => [
   ...functions(colors),
   ...keywords(colors),
   ...punctuation(colors),
-  ...typings(colors)
+  ...strings(colors),
+  ...typings(colors),
+  ...variables(colors)
 ];
 
 function buildGeneralSettings({ base }: Colors): TokenSettings[] {

@@ -16,6 +16,7 @@ import makefile from './makefile';
 import markdown from './markdown';
 import objectiveC from './objective-c';
 import ocaml from './ocaml';
+import perl from './perl';
 import php from './php';
 import powershell from './powershell';
 import regexp from './regexp';
@@ -43,6 +44,7 @@ export default (colors): TokenSettings[] => [
   ...markdown(colors),
   ...objectiveC(colors),
   ...ocaml(colors),
+  ...perl(colors),
   ...php(colors),
   ...powershell(colors),
   ...regexp(colors),

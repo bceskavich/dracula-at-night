@@ -7,7 +7,8 @@ export default (colors: Colors): TokenSettings[] => [
   classesInUse(colors),
   constants(colors),
   ...functions(colors),
-  ...punctuation(colors)
+  ...punctuation(colors),
+  symbols(colors)
 ];
 
 function instanceVariables({ base }: Colors): TokenSettings {
@@ -105,4 +106,21 @@ function punctuation({ base }: Colors): TokenSettings[] {
       }
     }
   ];
+}
+
+function symbols({ base }: Colors): TokenSettings {
+  return {
+    name: 'Ruby symbols',
+    scope: [
+      'constant.language.symbol.hashkey.ruby',
+      'constant.language.symbol.ruby',
+      'constant.other.symbol.hashkey.ruby',
+      'constant.other.symbol.ruby',
+      'punctuation.definition.constant.ruby',
+      'punctuation.definition.constant.hashkey.ruby'
+    ],
+    settings: {
+      foreground: base.purple
+    }
+  };
 }
