@@ -18,6 +18,7 @@ import objectiveC from './objective-c';
 import ocaml from './ocaml';
 import php from './php';
 import powershell from './powershell';
+import regexp from './regexp';
 import ruby from './ruby';
 import rust from './rust';
 import swift from './swift';
@@ -44,6 +45,7 @@ export default (colors): TokenSettings[] => [
   ...ocaml(colors),
   ...php(colors),
   ...powershell(colors),
+  ...regexp(colors),
   ...ruby(colors),
   ...rust(colors),
   ...swift(colors),

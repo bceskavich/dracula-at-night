@@ -18,6 +18,7 @@ function htmlTags({ base }: Colors): TokenSettings {
   };
 }
 
+// TODO: red????
 function componentTags({ base }: Colors): TokenSettings {
   return {
     name: 'Component tags',
