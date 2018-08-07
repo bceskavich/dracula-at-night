@@ -22,6 +22,7 @@ import powershell from './powershell';
 import regexp from './regexp';
 import ruby from './ruby';
 import rust from './rust';
+import shell from './shell';
 import swift from './swift';
 import toml from './toml';
 import typescript from './typescript';
@@ -50,6 +51,7 @@ export default (colors): TokenSettings[] => [
   ...regexp(colors),
   ...ruby(colors),
   ...rust(colors),
+  ...shell(colors),
   ...swift(colors),
   ...toml(colors),
   ...typescript(colors),

@@ -5,7 +5,8 @@ export default (colors: Colors): TokenSettings[] => [
   htmlTags(colors),
   componentTags(colors),
   ...selectors(colors),
-  attributeNames(colors)
+  attributeNames(colors),
+  resets(colors)
 ];
 
 function htmlTags({ base }: Colors): TokenSettings {
@@ -71,6 +72,22 @@ function attributeNames({ base }: Colors): TokenSettings {
     scope: ['entity.other.attribute-name'],
     settings: {
       foreground: base.green
+    }
+  };
+}
+
+function resets({ base }: Colors): TokenSettings {
+  return {
+    name: 'JSX / TSX / CSS foreground resets',
+    scope: [
+      'punctuation.section.embedded.begin.tsx',
+      'punctuation.section.embedded.end.tsx',
+      'punctuation.section.embedded.begin.jsx',
+      'punctuation.section.embedded.end.jsx',
+      'punctuation.separator.list.comma.css'
+    ],
+    settings: {
+      foreground: base.fg
     }
   };
 }

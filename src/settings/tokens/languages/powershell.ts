@@ -3,7 +3,8 @@ import TokenSettings from '../TokenSettings';
 
 export default (colors: Colors): TokenSettings[] => [
   punctuation(colors),
-  types(colors)
+  types(colors),
+  constants(colors)
 ];
 
 function punctuation({ base }: Colors): TokenSettings {
@@ -25,6 +26,16 @@ function types({ base }: Colors): TokenSettings {
     scope: ['source.powershell entity.other.attribute-name'],
     settings: {
       foreground: base.cyan
+    }
+  };
+}
+
+function constants({ base }: Colors): TokenSettings {
+  return {
+    name: 'Powershell constants',
+    scope: ['support.constant'],
+    settings: {
+      foreground: base.purple
     }
   };
 }

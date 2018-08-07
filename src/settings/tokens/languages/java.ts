@@ -4,7 +4,8 @@ import TokenSettings from '../TokenSettings';
 export default (colors: Colors): TokenSettings[] => [
   functions(colors),
   punctuationBounds(colors),
-  types(colors)
+  types(colors),
+  resets(colors)
 ];
 
 function functions({ base }: Colors): TokenSettings {
@@ -33,6 +34,16 @@ function types({ base }: Colors): TokenSettings {
     scope: ['source.java storage.type'],
     settings: {
       foreground: base.cyan
+    }
+  };
+}
+
+function resets({ base }: Colors): TokenSettings {
+  return {
+    name: 'Java foreground resets',
+    scope: ['keyword.operator.dereference.java', 'storage.modifier.import'],
+    settings: {
+      foreground: base.fg
     }
   };
 }

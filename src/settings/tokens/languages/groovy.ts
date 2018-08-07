@@ -3,7 +3,8 @@ import TokenSettings from '../TokenSettings';
 
 export default (colors: Colors): TokenSettings[] => [
   functions(colors),
-  ...typings(colors)
+  ...typings(colors),
+  resets(colors)
 ];
 
 function functions({ base }: Colors): TokenSettings {
@@ -33,4 +34,14 @@ function typings({ base }: Colors): TokenSettings[] {
       }
     }
   ];
+}
+
+function resets({ base }: Colors): TokenSettings {
+  return {
+    name: 'Groovy foreground resets',
+    scope: ['keyword.operator.navigation.groovy'],
+    settings: {
+      foreground: base.fg
+    }
+  };
 }
