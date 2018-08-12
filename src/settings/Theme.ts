@@ -13,8 +13,8 @@ export interface Theme {
 }
 
 export interface Colors {
-  base: BaseColors;
   ansi: ANSIColors;
+  base: BaseColors;
   misc: MiscColors;
 }
 
@@ -22,7 +22,6 @@ export interface Colors {
 export interface BaseColors {
   bg: string;
   fg: string;
-  selection: string;
   cyan: string;
   green: string;
   orange: string;
@@ -30,6 +29,7 @@ export interface BaseColors {
   purple: string;
   red: string;
   yellow: string;
+  white: string;
 }
 
 // ANSI colors
@@ -57,12 +57,14 @@ export interface MiscColors {
   quotes: string;
   propertyQuotes: string;
   comment: string;
+  activeBorder: string;
   lineHighlight: string;
+  container: string;
+  selection: string;
   nonText: string;
-  white: string;
   tabDropBg: string;
-  bgLighter: string;
   bgLight: string;
+  bgLighter: string;
   bgDark: string;
   bgDarker: string;
   purpleDarker: string;

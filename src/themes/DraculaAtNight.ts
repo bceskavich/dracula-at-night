@@ -5,14 +5,14 @@ import { ANSIColors, BaseColors, MiscColors, Theme } from '../settings/Theme';
 const base: BaseColors = {
   bg: '#0E1419',
   fg: '#F8F8F2',
-  selection: '#44475A',
   cyan: '#8BE9FD',
   green: '#50FA7B',
   orange: '#FFB86C',
   pink: '#FF79C6',
   purple: '#BD93F9',
   red: '#FF5555',
-  yellow: '#F1FA8C'
+  yellow: '#F1FA8C',
+  white: '#FFFFFF'
 };
 
 // ANSI colors
@@ -41,15 +41,17 @@ const misc: MiscColors = {
   propertyQuotes: '#8BE9FE',
 
   comment: '#6272A4',
+  activeBorder: '#6272A4',
   lineHighlight: '#253340',
+  container: '253340',
   nonText: '#424450',
-  white: '#FFFFFF',
   tabDropBg: '#44475A70',
   bgLighter: '#424450',
   bgLight: '#343746',
   bgDark: '#21222C',
   bgDarker: '#191A21',
-  purpleDarker: '#574473'
+  purpleDarker: '#574473',
+  selection: '#44475A'
 };
 
 const theme: Theme = {
