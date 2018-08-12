@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.0
+
+Refactored theme config, see [dracula-at-night#2](https://github.com/bceskavich/dracula-at-night/pull/2). There are a few small user facing changes in this update. I fixed some broken editor window styles and made others more consistent while rewriting.
+
 ## 1.3.0
 
 Updates to React and JSX stylings:
