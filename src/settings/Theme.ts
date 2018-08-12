@@ -54,8 +54,6 @@ export interface ANSIColors {
 
 // Other colors
 export interface MiscColors {
-  quotes: string;
-  propertyQuotes: string;
   comment: string;
   activeBorder: string;
   lineHighlight: string;

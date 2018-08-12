@@ -6,13 +6,13 @@
 	"publisher": "bceskavich",
 	"license": "MIT",
 	"scripts": {
-    "clean": "rm -rf build",
-    "compile": "yarn run clean && tsc",
-		"build": "mkdir -p ./theme && node ./build.js",
+		"clean": "rm -rf build",
+		"compile": "yarn run clean && tsc",
+		"build": "mkdir -p ./theme && ts-node ./src/build.ts",
 		"attach": "./bootstrap.sh attach",
-    "eject": "./bootstrap.sh eject",
-    "dev": "yarn run eject && yarn run build && yarn run attach",
-		"vscode:prepublish": "npm run build",
+		"eject": "./bootstrap.sh eject",
+		"dev": "yarn run eject && yarn run build && yarn run attach",
+		"vscode:prepublish": "yarn run build",
 		"format": "prettier --write 'src/**/*.ts'"
 	},
 	"maintainers": [
@@ -53,8 +53,7 @@
 		]
 	},
 	"devDependencies": {
-		"js-yaml": "^3.11.0",
-		"tinycolor2": "^1.4.1",
+		"@types/node": "^10.5.8",
 		"ts-node": "^7.0.0",
 		"tslint": "^5.11.0",
 		"tslint-config-prettier": "^1.14.0",

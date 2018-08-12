@@ -3,7 +3,6 @@ import { Colors } from '../Theme';
 
 // See: https://code.visualstudio.com/docs/getstarted/theme-color-reference#_peek-view-colors
 export default ({ base, misc }: Colors) => ({
-  // TODO: validate color change
   'peekView.border': misc.activeBorder,
   'peekViewEditor.background': base.bg,
   'peekViewEditorGutter.background': null,

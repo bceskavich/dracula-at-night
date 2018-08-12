@@ -36,14 +36,10 @@ const ansi: ANSIColors = {
 };
 
 const misc: MiscColors = {
-  // TODO: why were these marked temp?
-  quotes: '#E9F284',
-  propertyQuotes: '#8BE9FE',
-
   comment: '#6272A4',
   activeBorder: '#6272A4',
   lineHighlight: '#253340',
-  container: '253340',
+  container: '#253340',
   nonText: '#424450',
   tabDropBg: '#44475A70',
   bgLighter: '#424450',

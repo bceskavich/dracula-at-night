@@ -20,7 +20,6 @@ export default ({ base, ansi }: Colors) => ({
   'terminal.ansiMagenta': ansi.color5,
   'terminal.ansiCyan': ansi.color6,
   'terminal.ansiWhite': ansi.color8,
-  // TODO: validate color addition
-  'terminalCursor.background': base.green,
-  'terminalCursor.foreground': base.bg
+  'terminalCursor.background': base.bg,
+  'terminalCursor.foreground': ansi.color2
 });

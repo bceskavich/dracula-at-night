@@ -8,7 +8,6 @@ export default (colors: Colors): TokenSettings[] => [
   builtinClasses(colors)
 ];
 
-// TODO: will lack of fontStyle: normal cause problems?
 function classDefinitions({ base }: Colors): TokenSettings {
   return {
     name: 'Class definitions',

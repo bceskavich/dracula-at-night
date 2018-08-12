@@ -6,7 +6,6 @@ export default ({ base, misc }: Colors) => ({
   'input.foreground': base.fg,
   'input.border': misc.container,
   'input.placeholderForeground': misc.comment,
-  // TODO: validate color change
   'inputOption.activeBorder': misc.activeBorder,
   'inputValidation.infoBackground': null,
   'inputValidation.infoBorder': base.pink,
