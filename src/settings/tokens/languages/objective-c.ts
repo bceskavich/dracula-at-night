@@ -3,7 +3,7 @@ import TokenSettings from '../TokenSettings';
 
 export default ({ base }: Colors): TokenSettings[] => [
   {
-    name: 'Groovy Storage',
+    name: 'Objective-C Storage',
     scope: [
       'meta.implementation storage.type.objc',
       'meta.interface-or-protocol storage.type.objc'
@@ -13,7 +13,7 @@ export default ({ base }: Colors): TokenSettings[] => [
     }
   },
   {
-    name: 'Groovy Types',
+    name: 'Objective-C Types',
     scope: [
       'meta.protocol-list.objc',
       'meta.return-type.objc',
