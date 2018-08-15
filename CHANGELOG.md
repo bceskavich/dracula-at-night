@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.1.0
+
+- JavaScript and TypeScript constant definitions are now styled cyan, instead of purple. This is modeled after the way we do things in Ruby. I'm considering making this the default for all languages.
+- Fix some typos in the Objective-C settings
+
 ## 2.0.0
 
 Refactored theme config, see [dracula-at-night#2](https://github.com/bceskavich/dracula-at-night/pull/2). There are a few small user facing changes in this update. I fixed some broken editor window styles and made others more consistent while rewriting.
