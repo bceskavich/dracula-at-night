@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.2.0
+
+Add stylings for the new Breadcrumbs feature, released in [VS Code v1.26](https://code.visualstudio.com/updates/v1_26#_breadcrumbs)
+
 ## 2.1.0
 
 - JavaScript and TypeScript constant definitions are now styled cyan, instead of purple. This is modeled after the way we do things in Ruby. I'm considering making this the default for all languages.
