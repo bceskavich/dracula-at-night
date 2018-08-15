@@ -3,6 +3,7 @@ import TokenSettings from '../TokenSettings';
 
 export default (colors: Colors): TokenSettings[] => [
   prototypeProperty(colors),
+  constants(colors),
   specialLanguageClasses(colors),
   classesInUse(colors),
   ...functions(colors)
@@ -13,6 +14,16 @@ function prototypeProperty({ base }: Colors): TokenSettings {
     name: 'JavaScript prototype prop',
     scope: ['support.variable.property.js'],
     settings: { foreground: base.purple }
+  };
+}
+
+function constants({ base }: Colors): TokenSettings {
+  return {
+    name: 'JavaScript constant definitions',
+    scope: ['variable.other.constant.js'],
+    settings: {
+      foreground: base.cyan
+    }
   };
 }
 
