@@ -3,6 +3,7 @@ import { Colors } from '../Theme';
 import activityBar from './activity-bar';
 import badge from './badge';
 import base from './base';
+import breadcrumbs from './breadcrumbs';
 import buttons from './buttons';
 import contrast from './contrast';
 import debug from './debug';
@@ -32,6 +33,7 @@ export default (colors: Colors) => ({
   ...activityBar(colors),
   ...badge(colors),
   ...base(colors),
+  ...breadcrumbs(colors),
   ...buttons(colors),
   ...contrast(colors),
   ...debug(colors),
