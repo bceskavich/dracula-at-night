@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.2.1
+
+Fixed a small bug where some string punctuation marks weren't styled the right color.
+
 ## 2.2.0
 
 Add stylings for the new Breadcrumbs feature, released in [VS Code v1.26](https://code.visualstudio.com/updates/v1_26#_breadcrumbs)
