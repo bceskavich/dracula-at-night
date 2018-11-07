@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.3.0
+
+Added further Elixir support.
+
 ## 2.2.1
 
 Fixed a small bug where some string punctuation marks weren't styled the right color.
