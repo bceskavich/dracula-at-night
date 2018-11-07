@@ -4,6 +4,7 @@ import c from './c';
 import coffeescript from './coffeescript';
 import csharp from './csharp';
 import diff from './diff';
+import elixir from './elixir';
 import go from './go';
 import graphql from './graphql';
 import groovy from './groovy';
@@ -33,6 +34,7 @@ export default (colors): TokenSettings[] => [
   ...coffeescript(colors),
   ...csharp(colors),
   ...diff(colors),
+  ...elixir(colors),
   ...go(colors),
   ...graphql(colors),
   ...groovy(colors),
