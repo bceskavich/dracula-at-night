@@ -20,6 +20,7 @@ import ocaml from './ocaml';
 import perl from './perl';
 import php from './php';
 import powershell from './powershell';
+import python from './python';
 import regexp from './regexp';
 import ruby from './ruby';
 import rust from './rust';
@@ -50,6 +51,7 @@ export default (colors): TokenSettings[] => [
   ...perl(colors),
   ...php(colors),
   ...powershell(colors),
+  ...python(colors),
   ...regexp(colors),
   ...ruby(colors),
   ...rust(colors),
