@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.4.0
+
+Added further Python support:
+
+- Function definition coloring
+- Consistent function invocation coloring
+- Punctuation (dot syntax, colons) coloring
+
 ## 2.3.0
 
 Added further Elixir support.
