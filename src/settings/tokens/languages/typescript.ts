@@ -78,19 +78,23 @@ function classesInUse({ base }: Colors): TokenSettings {
 function typings({ base }: Colors): TokenSettings[] {
   return [
     {
-      name: 'TS Type Aliases and Interfaces',
+      name: 'TS Typing Definitions',
       scope: [
-        'entity.name.type.ts',
         'entity.name.type.alias.ts',
-        'entity.name.type.interface.ts'
+        'entity.name.type.interface.ts',
+        'entity.name.type.enum.ts'
       ],
       settings: {
         foreground: base.green
       }
     },
     {
-      name: 'TS Primitives and Builtins',
-      scope: ['support.type.primitive.ts', 'support.type.builtin.ts'],
+      name: 'TS Typing Uses',
+      scope: [
+        'support.type.primitive.ts',
+        'support.type.builtin.ts',
+        'entity.name.type.ts'
+      ],
       settings: {
         foreground: base.cyan
       }
