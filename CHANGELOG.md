@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.5.0
+
+Updates to syntax highlighting for JSX, CSS, and TypeScript typings. See https://github.com/bceskavich/dracula-at-night/pull/3 for more detailed explanations of each.
+
 ## 2.4.0
 
 Added further Python support:
