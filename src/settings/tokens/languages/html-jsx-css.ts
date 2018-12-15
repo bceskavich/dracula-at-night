@@ -2,12 +2,27 @@ import { Colors } from '../../Theme';
 import TokenSettings from '../TokenSettings';
 
 export default (colors: Colors): TokenSettings[] => [
+  jsxTagPunctuation(colors),
   htmlTags(colors),
   componentTags(colors),
   ...selectors(colors),
   attributeNames(colors),
-  resets(colors)
+  resets(colors),
+  ...css(colors)
 ];
+
+function jsxTagPunctuation({ base }: Colors): TokenSettings {
+  return {
+    name: 'JSX Tag Punctuation',
+    scope: [
+      'punctuation.definition.tag.begin.js',
+      'punctuation.definition.tag.end.js'
+    ],
+    settings: {
+      foreground: base.pink
+    }
+  };
+}
 
 function htmlTags({ base }: Colors): TokenSettings {
   return {
@@ -19,13 +34,12 @@ function htmlTags({ base }: Colors): TokenSettings {
   };
 }
 
-// TODO: red????
 function componentTags({ base }: Colors): TokenSettings {
   return {
     name: 'Component tags',
     scope: ['entity.name.tag support.class.component.js'],
     settings: {
-      foreground: base.purple
+      foreground: base.white
     }
   };
 }
@@ -90,4 +104,26 @@ function resets({ base }: Colors): TokenSettings {
       foreground: base.fg
     }
   };
+}
+
+function css({ base }: Colors): TokenSettings[] {
+  return [
+    {
+      name: 'CSS Property Keys',
+      scope: ['support.constant.property-value.css'],
+      settings: {
+        foreground: base.cyan
+      }
+    },
+    {
+      name: '@media rules',
+      scope: [
+        'keyword.control.at-rule.media.scss',
+        'keyword.control.at-rule.media.scss punctuation.definition.keyword.scss'
+      ],
+      settings: {
+        foreground: base.green
+      }
+    }
+  ];
 }
