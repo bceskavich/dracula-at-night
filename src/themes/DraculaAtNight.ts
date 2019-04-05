@@ -47,7 +47,8 @@ const misc: MiscColors = {
   bgDark: '#21222C',
   bgDarker: '#191A21',
   purpleDarker: '#574473',
-  selection: '#44475A'
+  selection: '#44475A',
+  menuHover: '#3A434D'
 };
 
 const theme: Theme = {
