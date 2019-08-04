@@ -16,7 +16,9 @@ function jsxTagPunctuation({ base }: Colors): TokenSettings {
     name: 'JSX Tag Punctuation',
     scope: [
       'punctuation.definition.tag.begin.js',
-      'punctuation.definition.tag.end.js'
+      'punctuation.definition.tag.end.js',
+      'punctuation.definition.tag.begin.tsx',
+      'punctuation.definition.tag.end.tsx'
     ],
     settings: {
       foreground: base.pink
@@ -37,7 +39,10 @@ function htmlTags({ base }: Colors): TokenSettings {
 function componentTags({ base }: Colors): TokenSettings {
   return {
     name: 'Component tags',
-    scope: ['entity.name.tag support.class.component.js'],
+    scope: [
+      'entity.name.tag support.class.component.js',
+      'entity.name.tag support.class.component.tsx'
+    ],
     settings: {
       foreground: base.white
     }
