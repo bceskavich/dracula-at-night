@@ -58,5 +58,10 @@
 		"tslint": "^5.11.0",
 		"tslint-config-prettier": "^1.14.0",
 		"typescript": "^3.0.1"
+	},
+	"__metadata": {
+		"id": "86fa6593-3f3e-484c-b7cd-00ba7c91c23f",
+		"publisherDisplayName": "bceskavich",
+		"publisherId": "72f2d502-2860-40d3-8a46-47cbf8a5d495"
 	}
 }

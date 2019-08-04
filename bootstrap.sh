@@ -3,22 +3,22 @@
 repo_dir="$( cd "$(dirname "${BASH_SOURCE[0]}")" && pwd )"
 
 attach() {
-    dracula_path="$( find ~/.vscode/extensions -maxdepth 1 -type d -name 'dracula*' )"
-    if [[ "$dracula_path" ]]; then
-        dracula_dir="$( basename "$dracula_path" )"
-        mkdir -p ~/.vscode/extensions/disabled
-        mv "$dracula_path" ~/.vscode/extensions/disabled/"$dracula_dir"
+    theme_path="$( find ~/.vscode/extensions -maxdepth 1 -type d -name '*dracula-at-night*' )"
+    if [[ "$theme_path" ]]; then
+        theme_dir="$( basename "$theme_path" )"
+        mkdir -p ~/.vscode/_disabled
+        mv "$theme_path" ~/.vscode/_disabled/"$theme_dir"
     fi
-    ln -s "$repo_dir" ~/.vscode/extensions/dracula
+    ln -s "$repo_dir" "$theme_path"
 }
 
 eject() {
-    rm -f ~/.vscode/extensions/dracula
-    if [ -d ~/.vscode/extensions/disabled ]; then
-        disabled_path="$( find ~/.vscode/extensions/disabled -maxdepth 1 -type d -name 'dracula*' )"
-        dracula_dir="$( basename "$disabled_path" )"
-        mv "$disabled_path" ~/.vscode/extensions/"$dracula_dir"
-        rm -r ~/.vscode/extensions/disabled
+    theme_disabled_path="$( find ~/.vscode/_disabled -maxdepth 1 -type d -name '*dracula-at-night*' )"
+    if [ "$theme_disabled_path" ]; then
+        theme_dir="$( basename "$theme_disabled_path" )"
+        rm ~/.vscode/extensions/"$theme_dir"
+        mv "$theme_disabled_path" ~/.vscode/extensions/"$theme_dir"
+        rm -r ~/.vscode/_disabled
     fi
 }
 
