@@ -59,6 +59,15 @@ function punctuation({ base }: Colors): TokenSettings[] {
       settings: {
         foreground: base.pink
       }
+    },
+    {
+      name: 'Elixir capture ampersands',
+      scope: [
+        'variable.other.anonymous.elixir punctuation.definition.variable.elixir'
+      ],
+      settings: {
+        foreground: base.pink
+      }
     }
   ];
 }
