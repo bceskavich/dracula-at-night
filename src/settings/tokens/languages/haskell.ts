@@ -30,14 +30,7 @@ function pragmas({ misc }: Colors): TokenSettings {
 function resets({ base }: Colors): TokenSettings {
   return {
     name: 'Haskell foreground resets',
-    scope: [
-      'punctuation.section.embedded.begin.tsx',
-      'punctuation.section.embedded.end.tsx',
-      'punctuation.section.embedded.begin.jsx',
-      'punctuation.section.embedded.end.jsx',
-      'punctuation.separator.list.comma.css',
-      'constant.language.empty-list.haskell'
-    ],
+    scope: ['constant.language.empty-list.haskell'],
     settings: {
       foreground: base.fg
     }
