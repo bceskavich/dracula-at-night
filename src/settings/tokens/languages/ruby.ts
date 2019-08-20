@@ -1,5 +1,5 @@
 import { Colors } from '../../Theme';
-import TokenSettings from '../TokenSettings';
+import TokenSettings, { TokenFontStyle } from '../TokenSettings';
 
 export default (colors: Colors): TokenSettings[] => [
   instanceVariables(colors),
@@ -19,7 +19,8 @@ function instanceVariables({ base }: Colors): TokenSettings {
       'variable.other.readwrite.instance.ruby punctuation.definition.variable.ruby'
     ],
     settings: {
-      foreground: base.orange
+      foreground: base.purple,
+      fontStyle: TokenFontStyle.italic
     }
   };
 }

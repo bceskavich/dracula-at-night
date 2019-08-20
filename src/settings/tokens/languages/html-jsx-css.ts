@@ -1,8 +1,7 @@
 import { Colors } from '../../Theme';
-import TokenSettings from '../TokenSettings';
+import TokenSettings, { TokenFontStyle } from '../TokenSettings';
 
 export default (colors: Colors): TokenSettings[] => [
-  jsxTagPunctuation(colors),
   htmlTags(colors),
   componentTags(colors),
   ...selectors(colors),
@@ -10,19 +9,6 @@ export default (colors: Colors): TokenSettings[] => [
   resets(colors),
   ...css(colors)
 ];
-
-function jsxTagPunctuation({ base }: Colors): TokenSettings {
-  return {
-    name: 'JSX Tag Punctuation',
-    scope: [
-      'punctuation.definition.tag.begin.js',
-      'punctuation.definition.tag.end.js'
-    ],
-    settings: {
-      foreground: base.pink
-    }
-  };
-}
 
 function htmlTags({ base }: Colors): TokenSettings {
   return {
@@ -39,7 +25,8 @@ function componentTags({ base }: Colors): TokenSettings {
     name: 'Component tags',
     scope: ['entity.name.tag support.class.component.js'],
     settings: {
-      foreground: base.white
+      foreground: base.cyan,
+      fontStyle: TokenFontStyle.italic
     }
   };
 }
@@ -85,7 +72,8 @@ function attributeNames({ base }: Colors): TokenSettings {
     name: 'HTML/CSS attribute names',
     scope: ['entity.other.attribute-name'],
     settings: {
-      foreground: base.green
+      foreground: base.green,
+      fontStyle: TokenFontStyle.italic
     }
   };
 }

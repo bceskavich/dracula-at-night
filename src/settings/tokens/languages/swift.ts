@@ -1,5 +1,5 @@
 import { Colors } from '../../Theme';
-import TokenSettings from '../TokenSettings';
+import TokenSettings, { TokenFontStyle } from '../TokenSettings';
 
 export default (colors: Colors): TokenSettings[] => [
   instanceKeywords(colors),
@@ -11,7 +11,7 @@ function instanceKeywords({ base }: Colors): TokenSettings {
   return {
     name: 'Swift instance keywords',
     scope: ['keyword.expressions-and-types.swift'],
-    settings: { foreground: base.purple }
+    settings: { foreground: base.purple, fontStyle: TokenFontStyle.italic }
   };
 }
 
