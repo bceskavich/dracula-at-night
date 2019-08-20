@@ -3,7 +3,6 @@ import TokenSettings from '../TokenSettings';
 
 export default (colors: Colors): TokenSettings[] => [
   constants(colors),
-  userDefinedConstants(colors),
   constantEscapes(colors),
   timestamps(colors),
   builtinConstants(colors)
@@ -12,17 +11,7 @@ export default (colors: Colors): TokenSettings[] => [
 function constants({ base }: Colors): TokenSettings {
   return {
     name: 'Constants',
-    scope: ['constant'],
-    settings: {
-      foreground: base.orange
-    }
-  };
-}
-
-function userDefinedConstants({ base }: Colors): TokenSettings {
-  return {
-    name: 'User-defined constants',
-    scope: ['variable.other.constant'],
+    scope: ['constant', 'variable.other.constant'],
     settings: {
       foreground: base.purple
     }

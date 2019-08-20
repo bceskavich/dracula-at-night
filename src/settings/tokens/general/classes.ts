@@ -1,5 +1,5 @@
 import { Colors } from '../../Theme';
-import TokenSettings from '../TokenSettings';
+import TokenSettings, { TokenFontStyle } from '../TokenSettings';
 
 export default (colors: Colors): TokenSettings[] => [
   classDefinitions(colors),
@@ -13,7 +13,7 @@ function classDefinitions({ base }: Colors): TokenSettings {
     name: 'Class definitions',
     scope: ['entity.name.type.class'],
     settings: {
-      foreground: base.green
+      foreground: base.cyan
     }
   };
 }
@@ -27,7 +27,8 @@ function instanceKeywords({ base }: Colors): TokenSettings {
       'variable.parameter.function.language.special'
     ],
     settings: {
-      foreground: base.purple
+      foreground: base.purple,
+      fontStyle: TokenFontStyle.italic
     }
   };
 }
@@ -37,7 +38,8 @@ function inheritedClasses({ base }: Colors): TokenSettings {
     name: 'Inherited classes',
     scope: ['entity.other.inherited-class'],
     settings: {
-      foreground: base.cyan
+      foreground: base.cyan,
+      fontStyle: TokenFontStyle.italic
     }
   };
 }
@@ -47,7 +49,7 @@ function builtinClasses({ base }: Colors): TokenSettings {
     name: 'Built-in classes',
     scope: ['support.class.builtin'],
     settings: {
-      foreground: base.green
+      foreground: base.cyan
     }
   };
 }

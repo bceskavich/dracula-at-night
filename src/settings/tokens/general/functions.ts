@@ -1,11 +1,11 @@
 import { Colors } from '../../Theme';
-import TokenSettings from '../TokenSettings';
+import TokenSettings, { TokenFontStyle } from '../TokenSettings';
 
 export default (colors: Colors): TokenSettings[] => [
   definitions(colors),
   params(colors),
   invocation(colors),
-  decorators(colors),
+  ...decorators(colors),
   magicFunctions(colors)
 ];
 
@@ -29,7 +29,8 @@ function params({ base }: Colors): TokenSettings {
       'variable.parameter'
     ],
     settings: {
-      foreground: base.orange
+      foreground: base.orange,
+      fontStyle: TokenFontStyle.italic
     }
   };
 }
@@ -44,23 +45,32 @@ function invocation({ base }: Colors): TokenSettings {
       'keyword.operator.function.infix'
     ],
     settings: {
-      foreground: base.cyan
+      foreground: base.green
     }
   };
 }
 
-function decorators({ base }: Colors): TokenSettings {
-  return {
-    name: 'Decorators',
-    scope: [
-      'meta.decorator variable.other.readwrite',
-      'meta.decorator variable.other.property',
-      'meta.decorator variable.other.object'
-    ],
-    settings: {
-      foreground: base.green
+function decorators({ base }: Colors): TokenSettings[] {
+  return [
+    {
+      name: 'Decorators',
+      scope: [
+        'meta.decorator variable.other.readwrite',
+        'meta.decorator variable.other.property'
+      ],
+      settings: {
+        foreground: base.green,
+        fontStyle: TokenFontStyle.italic
+      }
+    },
+    {
+      name: 'Decorator Objects',
+      scope: ['meta.decorator variable.other.object'],
+      settings: {
+        foreground: base.green
+      }
     }
-  };
+  ];
 }
 
 function magicFunctions({ base }: Colors): TokenSettings {

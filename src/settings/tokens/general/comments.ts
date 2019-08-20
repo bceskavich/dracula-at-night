@@ -1,5 +1,5 @@
 import { Colors } from '../../Theme';
-import TokenSettings from '../TokenSettings';
+import TokenSettings, { TokenFontStyle } from '../TokenSettings';
 
 export default (colors: Colors): TokenSettings[] => [
   comments(colors),
@@ -32,6 +32,23 @@ function jsdoc({ base }: Colors): TokenSettings[] {
         'comment.block.documentation storage.type.class'
       ],
       settings: {
+        foreground: base.pink
+      }
+    },
+    {
+      name: 'JSDoc-style types',
+      scope: ['comment.block.documentation entity.name.type'],
+      settings: {
+        foreground: base.cyan,
+        fontStyle: TokenFontStyle.italic
+      }
+    },
+    {
+      name: 'JSDoc-style type brackets',
+      scope: [
+        'comment.block.documentation entity.name.type punctuation.definition.bracket'
+      ],
+      settings: {
         foreground: base.cyan
       }
     },
@@ -39,7 +56,8 @@ function jsdoc({ base }: Colors): TokenSettings[] {
       name: 'JSDoc-style comment parameters',
       scope: ['comment.block.documentation variable'],
       settings: {
-        foreground: base.orange
+        foreground: base.orange,
+        fontStyle: TokenFontStyle.italic
       }
     }
   ];
