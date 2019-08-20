@@ -1,5 +1,5 @@
 import { Colors } from '../../Theme';
-import TokenSettings from '../TokenSettings';
+import TokenSettings, { TokenFontStyle } from '../TokenSettings';
 
 export default (colors: Colors): TokenSettings[] => [
   storage(colors),
@@ -23,7 +23,8 @@ function types({ base }: Colors): TokenSettings[] {
       name: 'Types',
       scope: ['entity.name.type'],
       settings: {
-        foreground: base.cyan
+        foreground: base.cyan,
+        fontStyle: TokenFontStyle.italic
       }
     },
     {

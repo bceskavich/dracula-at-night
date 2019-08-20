@@ -1,5 +1,5 @@
 import { Colors } from '../../Theme';
-import TokenSettings from '../TokenSettings';
+import TokenSettings, { TokenFontStyle } from '../TokenSettings';
 
 export default (colors: Colors): TokenSettings[] => [
   variables(colors),
@@ -25,7 +25,8 @@ function destructuring({ base }: Colors): TokenSettings[] {
         'meta.object-binding-pattern-variable variable.object.property'
       ],
       settings: {
-        foreground: base.orange
+        foreground: base.orange,
+        fontStyle: TokenFontStyle.italic
       }
     },
     {
