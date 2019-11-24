@@ -17,6 +17,7 @@ import git from './git';
 import inputs from './inputs';
 import lists from './lists';
 import mergeConflicts from './merge-conflicts';
+import menu from './menu';
 import notification from './notification';
 import panels from './panels';
 import peekView from './peek-view';
@@ -47,6 +48,7 @@ export default (colors: Colors) => ({
   ...inputs(colors),
   ...lists(colors),
   ...mergeConflicts(colors),
+  ...menu(colors),
   ...notification(colors),
   ...panels(colors),
   ...peekView(colors),

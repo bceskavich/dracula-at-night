@@ -66,4 +66,5 @@ export interface MiscColors {
   bgDark: string;
   bgDarker: string;
   purpleDarker: string;
+  menuHover: string;
 }
