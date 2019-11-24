@@ -1,5 +1,16 @@
 # Changelog
 
+## 2.6.0
+
+v2.6.0 includes a bunch of changes from the past few months. It's been a while since a release has been queued up!
+
+- Haskell syntax coloring fixes (https://github.com/bceskavich/dracula-at-night/commit/cff5fe299ddda7f944e023ef32bd16039486d4d3)
+- TypeScript JSX syntax coloring fixes (https://github.com/bceskavich/dracula-at-night/commit/fa4b948cd43874a85670abbcde96b6eaf852e3f4)
+- Adds coloring for Elixir's capture `&` operator (https://github.com/bceskavich/dracula-at-night/commit/a9b344a3b66769aa7fe16d3707d3616d4a91d518)
+- Better coloring support for Go (https://github.com/bceskavich/dracula-at-night/commit/a733b9967667c21065185da0e30160aad94269f1)
+- The bash script used to attach a test build of theme locally was broken. No longer! (https://github.com/bceskavich/dracula-at-night/commit/6c5892605829525530cac5db406b494df481e4d0)
+- Add styling for menu highlighting. Thank you @sargalias! (https://github.com/bceskavich/dracula-at-night/pull/5)
+
 ## 2.5.0
 
 Updates to syntax highlighting for JSX, CSS, and TypeScript typings. See https://github.com/bceskavich/dracula-at-night/pull/3 for more detailed explanations of each.
