@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.6.1
+
+Bugfixes:
+
+- Ensure Elixir atoms are colored cyan
+
 ## 2.6.0
 
 v2.6.0 includes a bunch of changes from the past few months. It's been a while since a release has been queued up!
