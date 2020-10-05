@@ -19,7 +19,7 @@ function functions({ base }: Colors): TokenSettings {
 function constants({ base }: Colors): TokenSettings {
   return {
     name: 'Elixir atoms',
-    scope: ['constant.other.symbol.elixir'],
+    scope: ['constant.other.symbol.elixir', 'constant.language.symbol.elixir'],
     settings: { foreground: base.cyan }
   };
 }
