@@ -2,59 +2,80 @@ import { Colors } from '../../Theme';
 import TokenSettings from '../TokenSettings';
 
 export default (colors: Colors): TokenSettings[] => [
-  instanceVariables(colors),
-  classVariables(colors),
-  classesInUse(colors),
-  constants(colors),
+  ...variables(colors),
+  modules(colors),
+  ...classes(colors),
   ...functions(colors),
   ...punctuation(colors),
   symbols(colors)
 ];
 
-function instanceVariables({ base }: Colors): TokenSettings {
-  return {
-    name: 'Ruby instance variables',
-    scope: [
-      'variable.other.readwrite.instance.ruby',
-      'variable.other.readwrite.instance.ruby punctuation.definition.variable.ruby'
-    ],
-    settings: {
-      foreground: base.orange
+function variables({ base }: Colors): TokenSettings[] {
+  return [
+    {
+      name: 'Ruby instance variables',
+      scope: [
+        'variable.other.readwrite.instance.ruby',
+        'variable.other.readwrite.instance.ruby punctuation.definition.variable.ruby'
+      ],
+      settings: {
+        foreground: base.orange
+      }
+    },
+    {
+      name: 'Ruby class variables',
+      scope: [
+        'variable.other.readwrite.class.ruby',
+        'variable.other.readwrite.class.ruby punctuation.definition.variable.ruby'
+      ],
+      settings: {
+        foreground: base.orange
+      }
+    },
+    {
+      name: 'Ruby constant definitions',
+      scope: ['variable.other.constant.ruby'],
+      settings: {
+        foreground: base.purple
+      }
     }
-  };
+  ];
 }
 
-function classVariables({ base }: Colors): TokenSettings {
+function modules({ base }: Colors): TokenSettings {
   return {
-    name: 'Ruby class variables',
-    scope: [
-      'variable.other.readwrite.class.ruby',
-      'variable.other.readwrite.class.ruby punctuation.definition.variable.ruby'
-    ],
-    settings: {
-      foreground: base.cyan
-    }
-  };
-}
-
-function classesInUse({ base }: Colors): TokenSettings {
-  return {
-    name: 'Ruby classes in use',
-    scope: ['support.class.ruby'],
+    name: 'Ruby modules',
+    scope: ['entity.name.type.module.ruby'],
     settings: {
       foreground: base.green
     }
   };
 }
 
-function constants({ base }: Colors): TokenSettings {
-  return {
-    name: 'Ruby constant definitions',
-    scope: ['variable.other.constant.ruby'],
-    settings: {
-      foreground: base.cyan
-    }
-  };
+function classes({ base }: Colors): TokenSettings[] {
+  return [
+    {
+      name: 'Class definitions',
+      scope: ['entity.name.type.class.ruby'],
+      settings: {
+        foreground: base.green
+      }
+    },
+    {
+      name: 'Inherited classes',
+      scope: ['entity.other.inherited-class.ruby'],
+      settings: {
+        foreground: base.purple
+      }
+    },
+    {
+      name: 'Classes inline',
+      scope: ['support.class.ruby'],
+      settings: {
+        foreground: base.purple
+      }
+    },
+  ];
 }
 
 function functions({ base }: Colors): TokenSettings[] {
@@ -70,10 +91,17 @@ function functions({ base }: Colors): TokenSettings[] {
       }
     },
     {
+      name: 'Ruby function parameters',
+      scope: ['variable.parameter.function.ruby'],
+      settings: {
+        foreground: base.fg
+      }
+    },
+    {
       name: 'Ruby block function parameters',
       scope: ['variable.other.block.ruby'],
       settings: {
-        foreground: base.orange
+        foreground: base.fg
       }
     },
     {
@@ -83,7 +111,7 @@ function functions({ base }: Colors): TokenSettings[] {
         'support.function.kernel.ruby'
       ],
       settings: {
-        foreground: base.cyan
+        foreground: base.fg
       }
     }
   ];
@@ -113,6 +141,7 @@ function symbols({ base }: Colors): TokenSettings {
     name: 'Ruby symbols',
     scope: [
       'constant.language.symbol.hashkey.ruby',
+      'constant.language.symbol.hashkey.parameter.function.ruby',
       'constant.language.symbol.ruby',
       'constant.other.symbol.hashkey.ruby',
       'constant.other.symbol.ruby',
@@ -120,7 +149,7 @@ function symbols({ base }: Colors): TokenSettings {
       'punctuation.definition.constant.hashkey.ruby'
     ],
     settings: {
-      foreground: base.purple
+      foreground: base.cyan
     }
   };
 }
