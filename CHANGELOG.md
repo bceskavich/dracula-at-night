@@ -1,5 +1,14 @@
 # Changelog
 
+## 2.7.0
+
+v2.7 updates syntax coloring rules for Ruby. The rules now align closely with the rules for Elixir. Key changes:
+
+- New color for symbols (cyan)
+- Updated coloring for constants (purple), instance variables (orange), and class variables (also orange)
+- Updated coloring for classes (green for definitions, purple for everything else)
+- No longer apply coloring to function/method parameters and function invocations
+
 ## 2.6.1
 
 Bugfixes:
